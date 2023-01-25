@@ -10,19 +10,10 @@ function Hero() {
   const tl = gsap.timeline();
 
   useLayoutEffect(() => {
-    window.addEventListener("load", () => {
-      tl.to(title.current, { width: "100%", duration: 0.3, ease: "in-out" });
-      tl.to(div.current, { justifyContent: "end" }, ">");
-      tl.to(title.current, { width: "0%", duration: 0.3, ease: "in-out" });
-      tl.to(text.current, { opacity: 1, ease: "none" }, "-=0.5");
-    });
-
-    return window.removeEventListener("load", () => {
-      tl.to(title.current, { width: "100%", duration: 0.3, ease: "in-out" });
-      tl.to(div.current, { justifyContent: "end" }, ">");
-      tl.to(title.current, { width: "0%", duration: 0.3, ease: "in-out" });
-      tl.to(text.current, { opacity: 1, ease: "none" }, "-=0.5");
-    });
+    tl.to(title.current, { width: "100%", duration: 0.3, ease: "in-out" });
+    tl.to(div.current, { justifyContent: "end" }, ">");
+    tl.to(title.current, { width: "0%", duration: 0.3, ease: "in-out" });
+    tl.to(text.current, { opacity: 1, ease: "none" }, "-=0.5");
   }, [tl]);
 
   return (
