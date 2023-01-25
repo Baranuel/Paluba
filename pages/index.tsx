@@ -15,7 +15,7 @@ export default function Home() {
     .getEntries({
       links_to_entry: "3X5VwOy97iYD3hl8uL5jaL",
     })
-    .then((response) => console.log(response.items.fields));
+    .then((response) => console.log(response.items));
   return (
     <>
       <Head>
