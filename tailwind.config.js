@@ -12,11 +12,28 @@ module.exports = {
         rye: ["Rye", "sans-serif"],
         sacramento: ["Sacramento", "cursive"],
       },
-      backgroundImage: {
-        heroPattern: 'url("/assets/hero-pic.jpg")',
-      },
       colors: {
         heroFilter: "#4A0109",
+        primaryRed: "#C00418",
+      },
+      screens: {
+        sm: { min: "350px", max: "767px" },
+        // => @media (min-width: 640px and max-width: 767px) { ... }
+
+        md: { min: "768px", max: "1023px" },
+        // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+        lg: { min: "1024px", max: "1279px" },
+        // => @media (min-width: 1024px and max-width: 1279px) { ... }
+
+        xl: { min: "1280px", max: "1535px" },
+        // => @media (min-width: 1280px and max-width: 1535px) { ... }
+
+        "2xl": { min: "1536px" },
+        // => @media (min-width: 1536px) { ... }
+      },
+      height: {
+        "9/10": "90vh",
       },
     },
   },
