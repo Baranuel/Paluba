@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.test {
+    font-family: 'Rye', cursive;
+}
