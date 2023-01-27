@@ -41,7 +41,11 @@ function Hero() {
       },
       "-=0.5"
     );
-    tl.to(button.current, { opacity: 1, translateY: 0, duration: 0.3 }, ">");
+    tl.to(
+      button.current,
+      { opacity: 1, translateY: 0, duration: 0.3 },
+      "-=0.5"
+    );
     tl.to(
       [text.current, smallText.current],
       { opacity: 1, ease: "none" },
