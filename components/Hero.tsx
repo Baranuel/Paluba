@@ -1,9 +1,13 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import HeroPicture from "../assets/hero-picture.jpg";
 import { gsap } from "gsap";
 
 function Hero() {
+  useLayoutEffect(() => {
+    animate();
+  }, []);
+
   const bigStripe = useRef(null);
   const smallStripe = useRef(null);
   const div = useRef(null);
@@ -16,7 +20,7 @@ function Hero() {
 
   const tl = gsap.timeline({ ease: "power3.inOut" });
 
-  useLayoutEffect(() => {
+  const animate = useCallback(() => {
     tl.to([bigStripe.current, smallStripe.current], {
       width: "100%",
       duration: 0.4,
