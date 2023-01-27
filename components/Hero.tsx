@@ -4,10 +4,6 @@ import HeroPicture from "../assets/hero-picture.jpg";
 import { gsap } from "gsap";
 
 function Hero() {
-  useLayoutEffect(() => {
-    animate();
-  }, []);
-
   const bigStripe = useRef(null);
   const smallStripe = useRef(null);
   const div = useRef(null);
@@ -48,6 +44,10 @@ function Hero() {
       "-=0.5"
     );
   }, [tl]);
+
+  useLayoutEffect(() => {
+    animate();
+  }, [animate]);
 
   return (
     <>
