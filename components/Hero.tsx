@@ -14,7 +14,7 @@ function Hero() {
   const filter = useRef(null);
   const button = useRef(null);
 
-  const tl = gsap.timeline({ ease: "power3.inOut" });
+  const tl = gsap.timeline({ ease: "power3.inOut", delay: 0.5 });
 
   const animate = useCallback(() => {
     tl.to([bigStripe.current, smallStripe.current], {

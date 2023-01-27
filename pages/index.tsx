@@ -2,7 +2,7 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import { Inter } from "@next/font/google";
 import { createClient } from "contentful";
-
+import image from "../assets/hero-picture.jpg";
 const inter = Inter({ subsets: ["latin"] });
 
 const client = createClient({
