@@ -39,13 +39,13 @@ function Hero() {
         duration: 0.3,
         stagger: 0.25,
       },
-      "-=0.75"
+      "-=0.5"
     );
     tl.to(button.current, { opacity: 1, translateY: 0, duration: 0.3 }, "<");
     tl.to(
       [text.current, smallText.current],
       { opacity: 1, ease: "none" },
-      "-=0.75"
+      "-=0.5"
     );
   }, [tl]);
 
