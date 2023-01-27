@@ -89,7 +89,7 @@ function Hero() {
                 ref={smallStripe}
                 className="absolute w-0 z-2 h-full bg-primaryRed"
               ></div>
-              <p ref={smallText} className="text-white text-2xl">
+              <p ref={smallText} className="text-white text-xl">
                 Dobre jedlo, Dobri ludia
               </p>
             </div>
