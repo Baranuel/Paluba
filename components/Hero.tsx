@@ -53,7 +53,7 @@ function Hero() {
     );
   }, [tl]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     animate();
   }, [animate]);
 
