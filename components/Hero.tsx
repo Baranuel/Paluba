@@ -23,7 +23,7 @@ function Hero() {
       ease: "in-out",
       stagger: 0.25,
     });
-    tl.to(img.current, { opacity: 1, duration: 0.5 }, ">");
+    tl.to(img.current, { opacity: 1, duration: 1 }, ">");
     tl.to(
       filter.current,
       {
@@ -31,17 +31,21 @@ function Hero() {
       },
       "<"
     );
-    tl.to([div.current, textDiv.current], { justifyContent: "end" }, ">");
-    tl.to([bigStripe.current, smallStripe.current], {
-      width: "0%",
-      duration: 0.3,
-      stagger: 0.25,
-    });
+    tl.to([div.current, textDiv.current], { justifyContent: "end" }, "<");
+    tl.to(
+      [bigStripe.current, smallStripe.current],
+      {
+        width: "0%",
+        duration: 0.3,
+        stagger: 0.25,
+      },
+      "-=0.75"
+    );
     tl.to(button.current, { opacity: 1, translateY: 0, duration: 0.3 }, "<");
     tl.to(
       [text.current, smallText.current],
       { opacity: 1, ease: "none" },
-      "-=0.5"
+      "-=0.75"
     );
   }, [tl]);
 
