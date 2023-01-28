@@ -32,6 +32,7 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
+<<<<<<< HEAD
       <div className=" w-full">
         <h3 className="self-start  ml-52 xl:ml-24 lg:ml-24 md:ml-4 sm:ml-4 mt-24 mb-4 ml-4 sm:text-2xl text-4xl text-primaryRed">
           Hlavne Chody
@@ -55,6 +56,29 @@ function MenuGrid({ categories }: menuProps) {
           </div>
         )}
       </div>
+=======
+      <h3 className="self-start mt-24 mb-4 sm:text-2xl text-4xl text-primaryRed">
+        Hlavne Chody
+      </h3>
+      {!isMobile && (
+        <div className="grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
+          {fields
+            .sort()
+            .reverse()
+            .map((item, index) => {
+              return (
+                <div key={index + "div"} className=" col-span-1">
+                  <ItemCard
+                    key={index + "Item-Card"}
+                    title={item.title_id}
+                    image={item.image}
+                  />
+                </div>
+              );
+            })}
+        </div>
+      )}
+>>>>>>> parent of 5c050d7 (sides of the slider , padding)
 
       {isMobile && (
         <Splide
@@ -67,8 +91,12 @@ function MenuGrid({ categories }: menuProps) {
             rewind: false,
             width: "100%",
             height: 250,
+<<<<<<< HEAD
 
             fixedWidth: windowWidth - 80,
+=======
+            fixedWidth: window.innerWidth - 80,
+>>>>>>> parent of 5c050d7 (sides of the slider , padding)
             flickPower: 300,
             gap: "0.5rem",
           }}
@@ -79,10 +107,7 @@ function MenuGrid({ categories }: menuProps) {
             .reverse()
             .map((item, index) => {
               return (
-                <SplideSlide
-                  className=" first:pl-4 last:pr-4"
-                  key={index + "slide"}
-                >
+                <SplideSlide className="py-1" key={index + "slide"}>
                   <ItemCard
                     key={index + "item"}
                     title={item.title_id}
