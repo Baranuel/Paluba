@@ -32,12 +32,12 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
-      <div className=" w-full">
-        <h3 className="self-start  ml-52 xl:ml-24 lg:ml-24 md:ml-4 sm:ml-4 mt-24 mb-4 ml-4 sm:text-2xl text-4xl text-primaryRed">
+      <div className="mx-80  xl:mx-24 lg:mx-24 md:mx-4 sm:mx-4 w-full min-h-screen">
+        <h3 className="self-start  xl:ml-24 lg:ml-24 md:ml-4 sm:ml-4 mt-24 mb-4 ml-4 sm:text-2xl text-4xl text-primaryRed">
           Hlavne Chody
         </h3>
         {!isMobile && (
-          <div className=" mx-52 xl:mx-24 lg:mx-24 md:mx-4 sm:mx-4 grid grid-cols-3 gid-rows-2 gap-4  h-80 mt-4">
+          <div className=" grid grid-cols-3 gid-rows-2 gap-4  h-80 mt-4">
             {fields
               .sort()
               .reverse()
@@ -54,45 +54,45 @@ function MenuGrid({ categories }: menuProps) {
               })}
           </div>
         )}
+
+        {isMobile && (
+          <Splide
+            options={{
+              drag: "free",
+              focus: "center",
+              snap: true,
+              pagination: false,
+              arrows: false,
+              rewind: false,
+              width: "100%",
+              height: 250,
+
+              fixedWidth: windowWidth - 80,
+              flickPower: 300,
+              gap: "0.5rem",
+            }}
+            aria-label="My Favorite Images"
+          >
+            {fields
+              .sort()
+              .reverse()
+              .map((item, index) => {
+                return (
+                  <SplideSlide
+                    className=" first:pl-4 last:pr-4"
+                    key={index + "slide"}
+                  >
+                    <ItemCard
+                      key={index + "item"}
+                      title={item.title_id}
+                      image={item.image}
+                    />
+                  </SplideSlide>
+                );
+              })}
+          </Splide>
+        )}
       </div>
-
-      {isMobile && (
-        <Splide
-          options={{
-            drag: "free",
-            focus: "center",
-            snap: true,
-            pagination: false,
-            arrows: false,
-            rewind: false,
-            width: "100%",
-            height: 250,
-
-            fixedWidth: windowWidth - 80,
-            flickPower: 300,
-            gap: "0.5rem",
-          }}
-          aria-label="My Favorite Images"
-        >
-          {fields
-            .sort()
-            .reverse()
-            .map((item, index) => {
-              return (
-                <SplideSlide
-                  className=" first:pl-4 last:pr-4"
-                  key={index + "slide"}
-                >
-                  <ItemCard
-                    key={index + "item"}
-                    title={item.title_id}
-                    image={item.image}
-                  />
-                </SplideSlide>
-              );
-            })}
-        </Splide>
-      )}
     </>
   );
 }
