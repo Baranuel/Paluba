@@ -9,6 +9,12 @@ interface menuProps {
 }
 
 function MenuGrid({ categories }: menuProps) {
+  const foodCategories = categories.find((category) =>
+    category.fields.title_id === "Palacinky" || "Tvarohova Pizza"
+      ? category
+      : null
+  );
+  console.log(foodCategories);
   const fields = categories.map((item) => {
     return item.fields;
   });
@@ -32,7 +38,7 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
-      <div className=" mx-24  2xl:mx-64 md:mx-4 sm:mx-4 flex flex-col items-center">
+      <div className=" mx-24  2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col items-center ">
         <h3 className="self-start mt-24 mb-4 sm:text-2xl text-4xl text-primaryRed">
           Hlavne Chody
         </h3>
