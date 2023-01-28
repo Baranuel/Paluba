@@ -8,6 +8,7 @@ import MenuGrid from "../components/MenuGrid";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home(props: any) {
+  console.log(props);
   return (
     <>
       <Head>
@@ -18,11 +19,11 @@ export default function Home(props: any) {
       </Head>
       <main className="bg-whiteBg">
         <Hero />
-        <div className="mx-64 md:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center  min-h-screen">
+        <div className="mx-80 xl:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center  min-h-screen">
           <h1 className="mt-24 text-6xl font-bold text-primaryRed font-sahitya">
             Ponuka
           </h1>
-          <MenuGrid />
+          <MenuGrid categories={props.categories} />
         </div>
       </main>
     </>
@@ -35,13 +36,14 @@ export async function getStaticProps(props: any) {
     accessToken: "Shkp5PbccjOlxcv1F0xI-ZfxwZ0i2lN9lv_6hC8eS4s",
   });
 
-  const data = await client.getEntries({
-    links_to_entry: "3X5VwOy97iYD3hl8uL5jaL",
+  const categories = await client.getEntries({
+    content_type: "category",
+    include: 10,
   });
 
   return {
     props: {
-      data: data.items,
+      categories: categories.items,
     }, // will be passed to the page component as props
   };
 }

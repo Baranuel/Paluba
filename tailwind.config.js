@@ -12,11 +12,13 @@ module.exports = {
         rye: ["Rye", "sans-serif"],
         sacramento: ["Sacramento", "cursive"],
         sahitya: ["Sahitya", "serif"],
+        quicksand: ["Quicksand", "sans-serif"],
       },
       colors: {
         heroFilter: "#4A0109",
         primaryRed: "#C00418",
         whiteBg: "#FFFCFC",
+        textColor: "#4B4242",
       },
       screens: {
         sm: { min: "250px", max: "767px" },
