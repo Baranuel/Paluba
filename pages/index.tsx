@@ -16,9 +16,9 @@ export default function Home(props: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="bg-whiteBg">
         <Hero />
-        <div className="mx-64 md:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center bg-whiteBg min-h-screen">
+        <div className="mx-64 md:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center  min-h-screen">
           <h1 className="mt-24 text-6xl font-bold text-primaryRed font-sahitya">
             Ponuka
           </h1>
