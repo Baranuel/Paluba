@@ -25,7 +25,9 @@ function MenuGrid() {
 
   return (
     <>
-      <h3 className="self-start">Hlavne Chody</h3>
+      <h3 className="self-start mt-14 mb-4 text-2xl text-primaryRed">
+        Hlavne Chody
+      </h3>
       {!isMobile && (
         <div className="grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-24">
           <div className=" col-span-1">
@@ -52,6 +54,7 @@ function MenuGrid() {
       {isMobile && (
         <Splide
           options={{
+            type: "loop",
             perPage: 2,
             drag: "free",
             pagination: false,
@@ -59,7 +62,7 @@ function MenuGrid() {
             rewind: false,
             width: "100%",
             fixedWidth: 325,
-
+            clones: 10,
             gap: "0.5rem",
           }}
           aria-label="My Favorite Images"
