@@ -61,6 +61,7 @@ function MenuGrid() {
             arrows: false,
             rewind: false,
             width: "100%",
+            height: 250,
             fixedWidth: window.innerWidth - 80,
             flickPower: 300,
             gap: "0.5rem",
