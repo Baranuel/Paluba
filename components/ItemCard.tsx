@@ -24,7 +24,7 @@ function ItemCard(props: ItemCardProps) {
           />
         </div>
       )}
-      <div className="p-3 sm:p-2 px-6 sm:px-4 text-textColor text-2xl font-quicksand font-semibold bg-whiteBg rounded-b-xl">
+      <div className="p-3 sm:p-2 px-6 sm:px-4 text-textColor text-2xl sm:text-xl font-quicksand font-semibold bg-whiteBg rounded-b-xl">
         {props?.title}
       </div>
     </div>

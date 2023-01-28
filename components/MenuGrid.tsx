@@ -14,7 +14,6 @@ function MenuGrid({ categories }: menuProps) {
   });
 
   const [isMobile, setIsMobile] = useState(false);
-
   const handleResize = () => {
     if (window.innerWidth < 768) {
       setIsMobile(true);
@@ -31,7 +30,7 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
-      <h3 className="self-start mt-14 mb-4 sm:text-3xl text-4xl text-primaryRed">
+      <h3 className="self-start mt-24 mb-4 sm:text-2xl text-4xl text-primaryRed">
         Hlavne Chody
       </h3>
       {!isMobile && (
