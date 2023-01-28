@@ -8,7 +8,7 @@ interface ItemCardProps {
 
 function ItemCard(props: ItemCardProps) {
   return (
-    <div className="min-w-min w-full shadow-md hover:shadow-lg flex flex-col  rounded-t-xl ">
+    <div className="min-w-min w-full shadow-md hover:shadow-lg flex flex-col  rounded-xl ">
       <div className="h-max">
         <Image
           className=" h-64 md:h-56 sm:h-44  rounded-t-xl object-cover "
@@ -16,7 +16,7 @@ function ItemCard(props: ItemCardProps) {
           alt="item image"
         />
       </div>
-      <div className="p-4 bg-whiteBg">Pizza</div>
+      <div className="p-4 bg-whiteBg rounded-b-xl">Pizza</div>
     </div>
   );
 }
