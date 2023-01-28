@@ -20,7 +20,11 @@ export default function Home(props: any) {
       <main className="bg-whiteBg">
         <Hero />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className=" flex flex-col items-center min-h-screen">
+=======
+        <div className="mx-80 xl:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center  min-h-screen">
+>>>>>>> parent of 5c050d7 (sides of the slider , padding)
 =======
         <div className="mx-80 xl:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center  min-h-screen">
 >>>>>>> parent of 5c050d7 (sides of the slider , padding)

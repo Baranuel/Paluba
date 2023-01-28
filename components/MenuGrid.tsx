@@ -33,6 +33,7 @@ function MenuGrid({ categories }: menuProps) {
   return (
     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className=" w-full">
         <h3 className="self-start  ml-52 xl:ml-24 lg:ml-24 md:ml-4 sm:ml-4 mt-24 mb-4 ml-4 sm:text-2xl text-4xl text-primaryRed">
           Hlavne Chody
@@ -57,6 +58,8 @@ function MenuGrid({ categories }: menuProps) {
         )}
       </div>
 =======
+=======
+>>>>>>> parent of 5c050d7 (sides of the slider , padding)
       <h3 className="self-start mt-24 mb-4 sm:text-2xl text-4xl text-primaryRed">
         Hlavne Chody
       </h3>
@@ -92,9 +95,12 @@ function MenuGrid({ categories }: menuProps) {
             width: "100%",
             height: 250,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             fixedWidth: windowWidth - 80,
 =======
+=======
+>>>>>>> parent of 5c050d7 (sides of the slider , padding)
             fixedWidth: window.innerWidth - 80,
 >>>>>>> parent of 5c050d7 (sides of the slider , padding)
             flickPower: 300,
