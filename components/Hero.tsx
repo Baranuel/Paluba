@@ -59,8 +59,8 @@ function Hero() {
 
   return (
     <>
-      <div className="min-w-fit w-full h-9/10 flex justify-start items-start">
-        <div className="w-full flex justify-center items-center absolute h-9/10 bg-heroPattern">
+      <div className="min-w-fit w-full h-screen flex justify-start items-start">
+        <div className="w-full flex justify-center items-center absolute h-screen bg-heroPattern">
           <Image
             ref={img}
             src={HeroPicture}
@@ -81,13 +81,13 @@ function Hero() {
               </h1>
               <div
                 ref={bigStripe}
-                className="absolute w-0 z-2 h-full bg-primaryRed"
+                className="absolute w-0 z-2 h-full rounded-md bg-primaryRed"
               ></div>
             </div>
             <div ref={textDiv} className="flex relative mb-4">
               <div
                 ref={smallStripe}
-                className="absolute w-0 z-2 h-full bg-primaryRed"
+                className="absolute w-0 z-2 h-full rounded-md bg-primaryRed"
               ></div>
               <p ref={smallText} className="text-white text-xl">
                 Dobre jedlo, Dobri ludia

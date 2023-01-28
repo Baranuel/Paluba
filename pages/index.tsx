@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
+import ItemCard from "../components/ItemCard";
 import { Inter } from "@next/font/google";
 import { createClient } from "contentful";
+import MenuGrid from "../components/MenuGrid";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home(props: any) {
-  console.log(props.data);
   return (
     <>
       <Head>
@@ -16,6 +18,12 @@ export default function Home(props: any) {
       </Head>
       <main>
         <Hero />
+        <div className="mx-64 md:mx-24 lg:mx-24 sm:mx-4 flex flex-col items-center sm:mx-0 min-h-screen">
+          <h1 className="mt-24 text-6xl font-bold text-primaryRed font-sahitya">
+            Ponuka
+          </h1>
+          <MenuGrid />
+        </div>
       </main>
     </>
   );

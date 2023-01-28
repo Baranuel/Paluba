@@ -11,10 +11,12 @@ module.exports = {
       fontFamily: {
         rye: ["Rye", "sans-serif"],
         sacramento: ["Sacramento", "cursive"],
+        sahitya: ["Sahitya", "serif"],
       },
       colors: {
         heroFilter: "#4A0109",
         primaryRed: "#C00418",
+        whiteBg: "#FFFCFC",
       },
       screens: {
         sm: { min: "350px", max: "767px" },
