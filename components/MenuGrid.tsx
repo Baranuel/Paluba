@@ -62,7 +62,7 @@ function MenuGrid() {
             rewind: false,
             width: "100%",
             fixedWidth: window.innerWidth - 80,
-            flickPower: 400,
+            flickPower: 300,
             gap: "0.5rem",
           }}
           aria-label="My Favorite Images"
