@@ -59,7 +59,6 @@ function MenuGrid() {
             arrows: false,
             rewind: false,
             width: "100%",
-            snap: true,
             fixedWidth: window.innerWidth - 80,
             gap: "0.5rem",
           }}
