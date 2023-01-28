@@ -6,7 +6,7 @@ import "@splidejs/splide/css";
 
 function MenuGrid() {
   const [isMobile, setIsMobile] = useState(false);
-  console.log(isMobile);
+
   const handleResize = () => {
     if (window.innerWidth < 768) {
       setIsMobile(true);
@@ -16,20 +16,13 @@ function MenuGrid() {
   };
 
   useEffect(() => {
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const settings = {
-    perPage: 2,
-    drag: "free",
-    pagination: false,
-    arrows: false,
-    rewind: true,
-    width: 800,
-    gap: "1rem",
-  };
+
   return (
     <>
       <h3 className="self-start">Hlavne Chody</h3>
