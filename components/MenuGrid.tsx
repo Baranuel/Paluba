@@ -14,7 +14,9 @@ function MenuGrid({ categories }: menuProps) {
   });
 
   const [isMobile, setIsMobile] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
   const handleResize = () => {
+    setWindowWidth(window.innerWidth);
     if (window.innerWidth < 768) {
       setIsMobile(true);
     } else {
@@ -30,7 +32,6 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className=" w-full">
@@ -64,13 +65,6 @@ function MenuGrid({ categories }: menuProps) {
       </h3>
       {!isMobile && (
         <div className="grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
-=======
-      <h3 className="self-start mt-24 mb-4 ml-4 sm:text-2xl text-4xl text-primaryRed">
-        Hlavne Chody
-      </h3>
-      {!isMobile && (
-        <div className="mx-80 xl:mx-24 lg:mx-24 md:mx-4 sm:mx-4 grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
->>>>>>> parent of b35be86 (some fixes)
           {fields
             .sort()
             .reverse()
@@ -87,10 +81,7 @@ function MenuGrid({ categories }: menuProps) {
             })}
         </div>
       )}
-<<<<<<< HEAD
 >>>>>>> parent of 5c050d7 (sides of the slider , padding)
-=======
->>>>>>> parent of b35be86 (some fixes)
 
       {isMobile && (
         <Splide
@@ -106,16 +97,12 @@ function MenuGrid({ categories }: menuProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
             fixedWidth: windowWidth - 80,
 =======
 =======
 >>>>>>> parent of 5c050d7 (sides of the slider , padding)
             fixedWidth: window.innerWidth - 80,
 >>>>>>> parent of 5c050d7 (sides of the slider , padding)
-=======
-            fixedWidth: window.innerWidth - 80,
->>>>>>> parent of b35be86 (some fixes)
             flickPower: 300,
             gap: "0.5rem",
           }}
