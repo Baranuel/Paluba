@@ -54,22 +54,20 @@ function MenuGrid() {
       {isMobile && (
         <Splide
           options={{
-            type: "loop",
-            perPage: 2,
             drag: "free",
             pagination: false,
             arrows: false,
             rewind: false,
             width: "100%",
-            fixedWidth: 325,
-            clones: 10,
+            snap: true,
+            fixedWidth: 350,
             gap: "0.5rem",
           }}
           aria-label="My Favorite Images"
         >
           {arr.map((item) => {
             return (
-              <SplideSlide className="py-1 w-80" key={item}>
+              <SplideSlide className="py-1" key={item}>
                 <ItemCard key={item} />
               </SplideSlide>
             );
