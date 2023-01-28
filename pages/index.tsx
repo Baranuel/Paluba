@@ -18,7 +18,7 @@ export default function Home(props: any) {
       </Head>
       <main>
         <Hero />
-        <div className="mx-64 md:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center min-h-screen">
+        <div className="mx-64 md:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center bg-whiteBg min-h-screen">
           <h1 className="mt-24 text-6xl font-bold text-primaryRed font-sahitya">
             Ponuka
           </h1>
