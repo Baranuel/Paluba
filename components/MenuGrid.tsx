@@ -32,70 +32,8 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className=" w-full">
-        <h3 className="self-start  ml-52 xl:ml-24 lg:ml-24 md:ml-4 sm:ml-4 mt-24 mb-4 ml-4 sm:text-2xl text-4xl text-primaryRed">
-          Hlavne Chody
-        </h3>
-        {!isMobile && (
-          <div className=" grid grid-cols-3 gid-rows-2 gap-4  h-80 mt-4">
-            {fields
-              .sort()
-              .reverse()
-              .map((item, index) => {
-                return (
-                  <div key={index + "div"} className=" col-span-1">
-                    <ItemCard
-                      key={index + "Item-Card"}
-                      title={item.title_id}
-                      image={item.image}
-                    />
-                  </div>
-                );
-              })}
-          </div>
-        )}
-
-        {isMobile && (
-          <Splide
-            options={{
-              drag: "free",
-              focus: "center",
-              snap: true,
-              pagination: false,
-              arrows: false,
-              rewind: false,
-              width: "100%",
-              height: 250,
-
-              fixedWidth: windowWidth - 80,
-              flickPower: 300,
-              gap: "0.5rem",
-            }}
-            aria-label="My Favorite Images"
-          >
-            {fields
-              .sort()
-              .reverse()
-              .map((item, index) => {
-                return (
-                  <SplideSlide
-                    className=" first:pl-4 last:pr-4"
-                    key={index + "slide"}
-                  >
-                    <ItemCard
-                      key={index + "item"}
-                      title={item.title_id}
-                      image={item.image}
-                    />
-                  </SplideSlide>
-                );
-              })}
-          </Splide>
-        )}
-      </div>
-      <h3 className="self-start mt-24 mb-4 sm:text-2xl text-4xl text-primaryRed">
+      =
+      <h3 className="self-start mt-24 mb-4 pl-4 sm:text-2xl text-4xl text-primaryRed">
         Hlavne Chody
       </h3>
       {!isMobile && (
@@ -116,7 +54,6 @@ function MenuGrid({ categories }: menuProps) {
             })}
         </div>
       )}
-
       {isMobile && (
         <Splide
           options={{
@@ -128,9 +65,7 @@ function MenuGrid({ categories }: menuProps) {
             rewind: false,
             width: "100%",
             height: 250,
-
             fixedWidth: windowWidth - 80,
-
             flickPower: 300,
             gap: "0.5rem",
           }}
@@ -141,7 +76,10 @@ function MenuGrid({ categories }: menuProps) {
             .reverse()
             .map((item, index) => {
               return (
-                <SplideSlide className="py-1" key={index + "slide"}>
+                <SplideSlide
+                  className="py-1 first:pl-4 last:pr-4"
+                  key={index + "slide"}
+                >
                   <ItemCard
                     key={index + "item"}
                     title={item.title_id}
