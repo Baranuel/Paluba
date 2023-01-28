@@ -60,7 +60,7 @@ function MenuGrid() {
             rewind: false,
             width: "100%",
             snap: true,
-            fixedWidth: 350,
+            fixedWidth: window.innerWidth - 80,
             gap: "0.5rem",
           }}
           aria-label="My Favorite Images"
