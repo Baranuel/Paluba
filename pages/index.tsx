@@ -31,7 +31,7 @@ export default function Home(props: any) {
   );
 }
 
-export async function getStaticProps(props: any) {
+export async function getServerSideProps(props: any) {
   const client = createClient({
     space: "xx2dzasjcpic",
     accessToken: "Shkp5PbccjOlxcv1F0xI-ZfxwZ0i2lN9lv_6hC8eS4s",
