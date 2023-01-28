@@ -55,6 +55,7 @@ function MenuGrid() {
         <Splide
           options={{
             drag: "free",
+            focus: "center",
             pagination: false,
             arrows: false,
             rewind: false,
