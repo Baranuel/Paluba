@@ -56,11 +56,13 @@ function MenuGrid() {
           options={{
             drag: "free",
             focus: "center",
+            snap: true,
             pagination: false,
             arrows: false,
             rewind: false,
             width: "100%",
             fixedWidth: window.innerWidth - 80,
+            flickPower: 200,
             gap: "0.5rem",
           }}
           aria-label="My Favorite Images"

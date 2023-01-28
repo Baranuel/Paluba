@@ -16,7 +16,7 @@ function ItemCard(props: ItemCardProps) {
           alt="item image"
         />
       </div>
-      <div className="p-4 bg-whiteBg rounded-b-xl">Pizza</div>
+      <div className="p-2 px-4 bg-whiteBg rounded-b-xl">Pizza</div>
     </div>
   );
 }
