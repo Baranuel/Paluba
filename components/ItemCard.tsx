@@ -10,7 +10,7 @@ function ItemCard(props: ItemCardProps) {
   const image = props?.image?.fields?.file;
   const thumbnail = `https:${image?.url}`;
   return (
-    <div className="min-w-min w-full shadow-md hover:shadow-lg flex relative flex-col  rounded-xl ">
+    <div className="min-w-min w-full shadow-md hover:shadow-lg flex  flex-col  rounded-xl ">
       {image && (
         <div className=" h-64 md:h-56 sm:h-44 relative rounded-t-xl">
           <Image

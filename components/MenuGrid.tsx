@@ -32,28 +32,29 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
-      =
-      <h3 className="self-start mt-24 mb-4 pl-4 sm:text-2xl text-4xl text-primaryRed">
-        Hlavne Chody
-      </h3>
-      {!isMobile && (
-        <div className="grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
-          {fields
-            .sort()
-            .reverse()
-            .map((item, index) => {
-              return (
-                <div key={index + "div"} className=" col-span-1">
-                  <ItemCard
-                    key={index + "Item-Card"}
-                    title={item.title_id}
-                    image={item.image}
-                  />
-                </div>
-              );
-            })}
-        </div>
-      )}
+      <div className=" mx-24  2xl:mx-64 md:mx-4 sm:mx-4 flex flex-col items-center">
+        <h3 className="self-start mt-24 mb-4 sm:text-2xl text-4xl text-primaryRed">
+          Hlavne Chody
+        </h3>
+        {!isMobile && (
+          <div className=" grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
+            {fields
+              .sort()
+              .reverse()
+              .map((item, index) => {
+                return (
+                  <div key={index + "div"} className=" col-span-1">
+                    <ItemCard
+                      key={index + "Item-Card"}
+                      title={item.title_id}
+                      image={item.image}
+                    />
+                  </div>
+                );
+              })}
+          </div>
+        )}
+      </div>
       {isMobile && (
         <Splide
           options={{

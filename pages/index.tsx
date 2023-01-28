@@ -20,14 +20,12 @@ export default function Home(props: any) {
       <main className="bg-whiteBg">
         <Hero />
 
-        <div className=" flex flex-col items-center min-h-screen">
-          <div className="mx-80 xl:mx-24 lg:mx-24 md:mx-4 sm:mx-4 flex flex-col items-center ">
-            <h1 className="mt-24 text-6xl font-bold text-primaryRed font-sahitya">
-              Ponuka
-            </h1>
-          </div>
-          <MenuGrid categories={props.categories} />
+        <div className=" flex flex-col items-center ">
+          <h1 className="mt-24 text-6xl font-bold text-primaryRed font-sahitya">
+            Ponuka
+          </h1>
         </div>
+        <MenuGrid categories={props.categories} />
       </main>
     </>
   );
