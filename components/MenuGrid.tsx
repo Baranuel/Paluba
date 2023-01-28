@@ -30,11 +30,11 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
-      <h3 className="self-start mt-24 mb-4 sm:text-2xl text-4xl text-primaryRed">
+      <h3 className="self-start mt-24 mb-4 ml-4 sm:text-2xl text-4xl text-primaryRed">
         Hlavne Chody
       </h3>
       {!isMobile && (
-        <div className="grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
+        <div className="mx-80 xl:mx-24 lg:mx-24 md:mx-4 sm:mx-4 grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
           {fields
             .sort()
             .reverse()
@@ -63,6 +63,7 @@ function MenuGrid({ categories }: menuProps) {
             rewind: false,
             width: "100%",
             height: 250,
+
             fixedWidth: window.innerWidth - 80,
             flickPower: 300,
             gap: "0.5rem",
@@ -74,7 +75,10 @@ function MenuGrid({ categories }: menuProps) {
             .reverse()
             .map((item, index) => {
               return (
-                <SplideSlide className="py-1" key={index + "slide"}>
+                <SplideSlide
+                  className=" first:pl-4 last:pr-4"
+                  key={index + "slide"}
+                >
                   <ItemCard
                     key={index + "item"}
                     title={item.title_id}
