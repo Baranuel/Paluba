@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import desertsIcon from "../assets/deserts.svg";
-import mainCourseIcon from "../assets/mainCourse.svg";
+import mainCourseIcon from "../assets/maincourse.svg";
 import Image from "next/image";
 // Default theme
 import "@splidejs/splide/css";
