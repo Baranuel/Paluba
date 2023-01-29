@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
+import desertsIcon from "../assets/deserts.svg";
+import mainCourseIcon from "../assets/mainCourse.svg";
+import Image from "next/image";
 // Default theme
 import "@splidejs/splide/css";
 
@@ -41,9 +44,6 @@ function MenuGrid({ categories }: menuProps) {
   return (
     <>
       <div className=" mx-24  2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col items-center ">
-        <h3 className="self-start mt-24 sm:mt-12 mb-4 sm:text-2xl text-4xl text-primaryRed">
-          Hlavne Chody
-        </h3>
         {!isMobile && (
           <div className=" grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
             {mainCourse
@@ -62,6 +62,16 @@ function MenuGrid({ categories }: menuProps) {
               })}
           </div>
         )}
+        <div className="self-start  flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
+          <Image
+            className="mr-2"
+            src={mainCourseIcon}
+            alt="main course"
+            width={25}
+            height={25}
+          />
+          <h3>Hlavne Chody</h3>
+        </div>
       </div>
 
       {isMobile && (
@@ -102,9 +112,16 @@ function MenuGrid({ categories }: menuProps) {
           </Splide>
           <hr className="mx-12 mb-4" />
 
-          <h3 className="self-start  ml-4  mb-4 sm:text-2xl text-4xl text-primaryRed">
-            Dezerty
-          </h3>
+          <div className="self-start  ml-4 items-center flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
+            <Image
+              className="mr-2"
+              src={desertsIcon}
+              alt="main course"
+              width={25}
+              height={25}
+            />
+            <h3>Dezerty</h3>
+          </div>
           <Splide
             options={{
               drag: "free",
