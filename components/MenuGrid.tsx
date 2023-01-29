@@ -43,7 +43,7 @@ function MenuGrid({ categories }: menuProps) {
 
   return (
     <>
-      <div className=" mx-24  2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col items-center ">
+      <div className="mt-12 mx-24 2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col items-center ">
         <div className="self-start  flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
           <Image
             className="mr-2"
