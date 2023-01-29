@@ -12,9 +12,12 @@ function MenuGrid({ categories }: menuProps) {
   const sweetFood = categories.filter((item) =>
     ["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
   );
+  const foods = categories.filter(
+    (item) => !["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
+  );
 
   const deserts = sweetFood.map((item) => item.fields);
-  const fields = categories.map((item) => {
+  const mainCourse = foods.map((item) => {
     return item.fields;
   });
 
@@ -43,7 +46,7 @@ function MenuGrid({ categories }: menuProps) {
         </h3>
         {!isMobile && (
           <div className=" grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
-            {fields
+            {mainCourse
               .sort()
               .reverse()
               .map((item, index) => {
@@ -79,7 +82,7 @@ function MenuGrid({ categories }: menuProps) {
             }}
             aria-label="My Favorite Images"
           >
-            {fields
+            {mainCourse
               .sort()
               .reverse()
               .map((item, index) => {
@@ -97,11 +100,11 @@ function MenuGrid({ categories }: menuProps) {
                 );
               })}
           </Splide>
+          <hr className="mx-12 mb-4" />
 
           <h3 className="self-start  ml-4  mb-4 sm:text-2xl text-4xl text-primaryRed">
             Dezerty
           </h3>
-
           <Splide
             options={{
               drag: "free",
