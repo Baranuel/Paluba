@@ -9,12 +9,11 @@ interface menuProps {
 }
 
 function MenuGrid({ categories }: menuProps) {
-  const foodCategories = categories.find((category) =>
-    category.fields.title_id === "Palacinky" || "Tvarohova Pizza"
-      ? category
-      : null
+  const sweetFood = categories.filter((item) =>
+    ["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
   );
-  console.log(foodCategories);
+
+  const deserts = sweetFood.map((item) => item.fields);
   const fields = categories.map((item) => {
     return item.fields;
   });
@@ -61,6 +60,7 @@ function MenuGrid({ categories }: menuProps) {
           </div>
         )}
       </div>
+
       {isMobile && (
         <>
           <Splide
@@ -72,7 +72,7 @@ function MenuGrid({ categories }: menuProps) {
               arrows: false,
               rewind: false,
               width: "100%",
-              height: 225,
+              height: 210,
               fixedWidth: windowWidth - 80,
               flickPower: 300,
               gap: "0.5rem",
@@ -97,9 +97,11 @@ function MenuGrid({ categories }: menuProps) {
                 );
               })}
           </Splide>
+
           <h3 className="self-start  ml-4  mb-4 sm:text-2xl text-4xl text-primaryRed">
             Dezerty
           </h3>
+
           <Splide
             options={{
               drag: "free",
@@ -109,30 +111,27 @@ function MenuGrid({ categories }: menuProps) {
               arrows: false,
               rewind: false,
               width: "100%",
-              height: 250,
+              height: 210,
               fixedWidth: windowWidth - 80,
               flickPower: 300,
               gap: "0.5rem",
             }}
             aria-label="My Favorite Images"
           >
-            {fields
-              .sort()
-
-              .map((item, index) => {
-                return (
-                  <SplideSlide
-                    className="py-1 first:pl-4 last:pr-4"
-                    key={index + "slide"}
-                  >
-                    <ItemCard
-                      key={index + "item"}
-                      title={item.title_id}
-                      image={item.image}
-                    />
-                  </SplideSlide>
-                );
-              })}
+            {deserts.sort().map((item, index) => {
+              return (
+                <SplideSlide
+                  className="py-1 first:pl-4 last:pr-4"
+                  key={index + "slide"}
+                >
+                  <ItemCard
+                    key={index + "item"}
+                    title={item.title_id}
+                    image={item.image}
+                  />
+                </SplideSlide>
+              );
+            })}
           </Splide>
         </>
       )}
