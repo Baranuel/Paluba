@@ -18,7 +18,9 @@ module.exports = {
         heroFilter: "#4A0109",
         primaryRed: "#C00418",
         whiteBg: "#FFFCFC",
+        bgSecondary: "#FFF2EC",
         textColor: "#4B4242",
+        bluntGrey: "#6B6B6B",
       },
       screens: {
         sm: { min: "250px", max: "767px" },

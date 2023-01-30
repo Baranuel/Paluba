@@ -1,14 +1,12 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
-import ItemCard from "../components/ItemCard";
-import { Inter } from "@next/font/google";
 import { createClient } from "contentful";
 import MenuGrid from "../components/MenuGrid/MenuGrid";
-
-const inter = Inter({ subsets: ["latin"] });
+import Heading from "../components/Heading";
+import NaseHodnotyPage from "../components/NaseHodnoty/HodnotyPage";
+import HodnotyPage from "../components/NaseHodnoty/HodnotyPage";
 
 export default function Home(props: any) {
-  console.log(props);
   return (
     <>
       <Head>
@@ -19,14 +17,9 @@ export default function Home(props: any) {
       </Head>
       <main className="bg-whiteBg">
         <Hero />
-
-        <div className=" flex flex-col items-center ">
-          <h1 className="mt-24 sm:mt-12 text-6xl sm:text-4xl font-bold text-primaryRed font-sahitya">
-            Ponuka
-          </h1>
-        </div>
+        <Heading title="Ponuka" />
         <MenuGrid categories={props.categories} />
-        <div className="min-h-screen bg-red-800">yo</div>
+        <HodnotyPage />
       </main>
     </>
   );
