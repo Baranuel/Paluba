@@ -10,7 +10,7 @@ interface HodnotaCardProps {
 
 function HodnotaCard({ image, title, text, isMobile }: HodnotaCardProps) {
   return (
-    <div className=" p-4 sm:p-2 flex sm:min-w-[48%] sm:max-w-[48%] w-1/4 grow border rounded-lg border-primaryRed items-center">
+    <div className=" bg-bgSecondary z-1 p-4 sm:p-2 flex sm:min-w-[48%] sm:max-w-[48%] w-1/4 grow border rounded-lg border-primaryRed items-center">
       <Image
         className="mr-2"
         src={image}

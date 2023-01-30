@@ -21,6 +21,7 @@ module.exports = {
         bgSecondary: "#FFF2EC",
         textColor: "#4B4242",
         bluntGrey: "#6B6B6B",
+        hrColor: "#E7E0CE",
       },
       screens: {
         sm: { min: "250px", max: "767px" },
