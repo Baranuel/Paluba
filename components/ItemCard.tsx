@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 interface ItemCardProps {
   title?: string;
-  image?: any;
+  image?: Record<string, any>;
 }
 
 function ItemCard(props: ItemCardProps) {
   const image = props?.image?.fields?.file;
   const thumbnail = `https:${image?.url}`;
+
   return (
     <div className="min-w-min w-full shadow-md hover:shadow-lg flex  flex-col relative  rounded-xl ">
       {image && (

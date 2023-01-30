@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import ItemCard from "../components/ItemCard";
 import { Inter } from "@next/font/google";
 import { createClient } from "contentful";
-import MenuGrid from "../components/MenuGrid";
+import MenuGrid from "../components/MenuGrid/MenuGrid";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +26,7 @@ export default function Home(props: any) {
           </h1>
         </div>
         <MenuGrid categories={props.categories} />
+        <div className="min-h-screen bg-red-800">yo</div>
       </main>
     </>
   );
