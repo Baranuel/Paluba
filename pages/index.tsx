@@ -5,8 +5,27 @@ import MenuGrid from "../components/MenuGrid/MenuGrid";
 import Heading from "../components/Heading";
 import NaseHodnotyPage from "../components/NaseHodnoty/HodnotyPage";
 import HodnotyPage from "../components/NaseHodnoty/HodnotyPage";
+import { useEffect, useState } from "react";
 
 export default function Home(props: any) {
+  const [isMobile, setIsMobile] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <Head>
@@ -17,9 +36,12 @@ export default function Home(props: any) {
       </Head>
       <main className="bg-whiteBg">
         <Hero />
-        <Heading title="Ponuka" />
-        <MenuGrid categories={props.categories} />
-        <HodnotyPage />
+        <MenuGrid
+          isMobile={isMobile}
+          windowWidth={windowWidth}
+          categories={props.categories}
+        />
+        <HodnotyPage isMobile={isMobile} />
       </main>
     </>
   );

@@ -4,11 +4,14 @@ import React, { useEffect, useState } from "react";
 import "@splidejs/splide/css";
 import DesktopGrid from "./DesktopGrid";
 import MobileGrid from "./MobileGrid";
+import Heading from "../Heading";
 interface menuProps {
+  windowWidth: number;
+  isMobile: boolean;
   categories: any[];
 }
 
-function MenuGrid({ categories }: menuProps) {
+function MenuGrid({ categories, windowWidth, isMobile }: menuProps) {
   const sweetFood = categories.filter((item) =>
     ["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
   );
@@ -21,37 +24,24 @@ function MenuGrid({ categories }: menuProps) {
     return item.fields;
   });
 
-  const [isMobile, setIsMobile] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <>
       {!isMobile && (
-        <div className="mt-6 mx-24 2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col min-h-screen items-center ">
+        <div className="mt-6 pb-12 mx-24 2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col min-h-screen items-center ">
+          <Heading title="Ponuka" />
           <DesktopGrid mainCourse={mainCourse} deserts={deserts} />
         </div>
       )}
 
       {isMobile && (
-        <MobileGrid
-          windowWidth={windowWidth}
-          mainCourse={mainCourse}
-          deserts={deserts}
-        />
+        <>
+          <Heading title="Ponuka" />
+          <MobileGrid
+            windowWidth={windowWidth}
+            mainCourse={mainCourse}
+            deserts={deserts}
+          />
+        </>
       )}
     </>
   );
