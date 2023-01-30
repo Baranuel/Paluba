@@ -20,7 +20,7 @@ function HodnotyPage() {
         <HodnotaCard image={saladImg} title="Kvalita" text="Vzdy Fresh" />
         <HodnotaCard
           image={trofejImg}
-          title="Uzasna Pizza"
+          title="Super Pizza"
           text="Jednotka v okoli"
         />
       </div>

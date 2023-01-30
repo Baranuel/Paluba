@@ -19,7 +19,7 @@ function HodnotaCard({ image, title, text }: HodnotaCardProps) {
       />
       <div className="min-w-fit  p-2 leading-3">
         <h3 className="font-semibold text-lg text-primaryRed">{title}</h3>
-        <p className="font-medium text-bluntGrey text-sm">{text}</p>
+        <p className="font-medium text-bluntGrey text-[0.85rem]">{text}</p>
       </div>
     </div>
   );
