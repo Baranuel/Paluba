@@ -12,7 +12,7 @@ function RecenziaCard() {
         získala srdcia miestnych obyvateľov. Ak hľadáte tradičnú a chutnú pizzu,
         Pizza Paluba je tým správnym miestom.
       </p>
-      <h3 className="self-center mt-12 text-4xl sm:text-3xl  font-medium font-sacramento">
+      <h3 className="self-center mt-12 text-4xl sm:text-2xl  font-medium font-sacramento">
         - Reka Forgo
       </h3>
     </div>
