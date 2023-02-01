@@ -6,6 +6,7 @@ import Heading from "../components/Heading";
 import NaseHodnotyPage from "../components/NaseHodnoty/HodnotyPage";
 import HodnotyPage from "../components/NaseHodnoty/HodnotyPage";
 import { useEffect, useState } from "react";
+import RecenziePage from "../components/Recenzie/RecenziePage";
 
 export default function Home(props: any) {
   const [isMobile, setIsMobile] = useState(false);
@@ -42,6 +43,7 @@ export default function Home(props: any) {
           categories={props.categories}
         />
         <HodnotyPage isMobile={isMobile} />
+        <RecenziePage />
       </main>
     </>
   );

@@ -18,8 +18,8 @@ function HodnotaCard({ image, title, text, isMobile }: HodnotaCardProps) {
         width={isMobile ? 40 : 50}
         height={isMobile ? 40 : 50}
       />
-      <div className="min-w-fit  p-2 sm:p-0">
-        <h3 className="font-semibold text-2xl lg:text-xl sm:text-[1rem] md:text-[1rem] sm:leading-[1.2rem] text-primaryRed">
+      <div className="min-w-fit flex flex-col  p-2 sm:p-0">
+        <h3 className="font-semibold text-2xl lg:text-xl sm:text-[1.1rem] md:text-[1.2rem] sm:leading-[1rem] text-primaryRed">
           {title}
         </h3>
         <p className="font-medium text-bluntGrey text-xl lg:text-lg  md:text-[0.75rem] sm:text-[0.85rem] sm:leading-[1.5rem]">
