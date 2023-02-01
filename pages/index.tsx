@@ -13,7 +13,7 @@ export default function Home(props: any) {
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 600) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
