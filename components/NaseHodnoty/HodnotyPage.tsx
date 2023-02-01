@@ -51,9 +51,12 @@ function HodnotyPage({ isMobile }: HodnotyPageProps) {
         <h2 className="sm:text-2xl text-3xl font-semibold text-center">
           Fungujeme uz vyse 15 rokov
         </h2>
-        <p className=" w-[52ch] sm:w-fit z-1 text-start sm:text-center w-10/12 mt-2 text-2xl sm:text-xl">
-          Vzdy sa snazime dorucit najvyssiu spokojnost. Vazime si hodnoty ktore
-          nas odlisili od zvysku restauracii.
+        <p className=" w-[75ch] mb-4 sm:w-fit z-1 text-start sm:text-center w-10/12 mt-2 text-[1.3rem] sm:text-[1rem]">
+          V Palube vieme, že nič neprekoná chuť čerstvo upečenej pizze s
+          kvalitnými surovinami, preto používame len tie najlepšie a
+          najčerstvejšie. Veríme, že dobrá pizza nie je len o jedle, ale aj o
+          skúsenosti. Do každej objednávky z našej pizzérie dávame srdce a dušu,
+          aby bola nezabudnuteľná.
         </p>
         <button className="text-white text-2xl sm:text-xl mt-6 py-3 px-8 sm:py-3 sm:px-6 rounded-md bg-primaryRed">
           Prehliadat Menu
