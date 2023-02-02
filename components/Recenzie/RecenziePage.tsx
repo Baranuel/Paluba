@@ -14,7 +14,7 @@ function RecenziePage() {
           <RecenziaCard />
         </div>
       </div>
-      <h1 className="self-end sm:self-center mt-6 text-2xl text-primaryRed underline">
+      <h1 className="self-end sm:self-center mt-6 text-2xl sm:text-xl text-primaryRed underline">
         Viac Recenzii
       </h1>
     </div>
