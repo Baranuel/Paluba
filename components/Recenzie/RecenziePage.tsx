@@ -1,6 +1,8 @@
+import Image from "next/image";
 import React from "react";
 import Heading from "../Heading";
 import RecenziaCard from "./RecenziaCard";
+import externalLink from "../../assets/externalLink.svg";
 
 function RecenziePage() {
   return (
@@ -14,9 +16,20 @@ function RecenziePage() {
           <RecenziaCard />
         </div>
       </div>
-      <h1 className="self-end sm:self-center mt-6 text-2xl sm:text-xl text-primaryRed underline">
-        Viac Recenzii
-      </h1>
+      <a
+        href="#"
+        className="flex mt-6 sm:justify-center justify-end items-center"
+      >
+        <h1 className=" mr-2 text-2xl sm:text-xl text-primaryRed underline">
+          Viac Recenzii
+        </h1>
+        <Image
+          src={externalLink}
+          alt="external link icon"
+          width={20}
+          height={20}
+        />
+      </a>
     </div>
   );
 }
