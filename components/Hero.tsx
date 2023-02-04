@@ -100,7 +100,7 @@ function Hero() {
               href="#Ponuka"
               scroll={false}
             >
-              Prehliadať Menu
+              Vybrať Jedlo
             </Link>
           </div>
         </div>

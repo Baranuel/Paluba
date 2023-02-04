@@ -64,7 +64,7 @@ function HodnotyPage({ isMobile }: HodnotyPageProps) {
           scroll={false}
           className="text-white text-2xl sm:text-xl mt-6 py-3 px-8 sm:py-3 sm:px-6 rounded-md bg-primaryRed"
         >
-          Prehliadať Menu
+          Vybrať Jedlo
         </Link>
       </div>
     </div>
