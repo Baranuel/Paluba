@@ -46,7 +46,7 @@ export default function Home(props: any) {
         />
         <HodnotyPage isMobile={isMobile} />
         <RecenziePage />
-        <ContactPage />
+        <ContactPage isMobile={isMobile} />
       </main>
       <Footer />
     </>

@@ -6,8 +6,8 @@ import instagram from "../../assets/instagram.svg";
 
 function Footer() {
   return (
-    <footer className="h-44 bg-primaryRed flex justify-between items-center w-full">
-      <a href="#">
+    <footer className="h-44 bg-primaryRed flex justify-between items-center w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2">
+      <a className="w-1/3" href="#">
         <Image src={logo} alt="logo" width={150} height={150} />
       </a>
       <div className="h-full flex flex-col text-xl sm:text-sm justify-center items-center w-1/3 text-white">

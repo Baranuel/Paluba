@@ -27,15 +27,15 @@ function MenuGrid({ categories, windowWidth, isMobile }: menuProps) {
   return (
     <>
       {!isMobile && (
-        <div className="mt-6 pb-12 mx-24 2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col min-h-screen items-center ">
-          <Heading title="Ponuka" />
+        <div className="mt-6 pb-12 mx-24 2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col min-h-screen  items-center ">
+          <Heading title="Ponuka" id="Ponuka" />
           <DesktopGrid mainCourse={mainCourse} deserts={deserts} />
         </div>
       )}
 
       {isMobile && (
         <>
-          <Heading title="Ponuka" />
+          <Heading title="Ponuka" id="Ponuka" />
           <MobileGrid
             windowWidth={windowWidth}
             mainCourse={mainCourse}

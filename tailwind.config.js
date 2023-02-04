@@ -42,6 +42,7 @@ module.exports = {
       },
       height: {
         "9/10": "90vh",
+        "3/10": "30vh",
       },
     },
   },

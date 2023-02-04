@@ -7,6 +7,7 @@ import saladImg from "../../assets/salat.svg";
 import trofejImg from "../../assets/trofej.svg";
 import Image from "next/image";
 import bgPic from "../../assets/backgroundPizza.svg";
+import Link from "next/link";
 
 interface HodnotyPageProps {
   isMobile: boolean;
@@ -58,9 +59,13 @@ function HodnotyPage({ isMobile }: HodnotyPageProps) {
           skúsenosti. Do každej objednávky z našej pizzérie dávame srdce a dušu,
           aby bola nezabudnuteľná.
         </p>
-        <button className="text-white text-2xl sm:text-xl mt-6 py-3 px-8 sm:py-3 sm:px-6 rounded-md bg-primaryRed">
+        <Link
+          href="#Ponuka"
+          scroll={false}
+          className="text-white text-2xl sm:text-xl mt-6 py-3 px-8 sm:py-3 sm:px-6 rounded-md bg-primaryRed"
+        >
           Prehliadat Menu
-        </button>
+        </Link>
       </div>
     </div>
   );

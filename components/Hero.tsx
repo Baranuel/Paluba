@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import HeroPicture from "../assets/hero-picture.jpg";
 import { gsap } from "gsap";
 
@@ -93,12 +94,14 @@ function Hero() {
                 Dobre jedlo, Dobri ludia
               </p>
             </div>
-            <button
+            <Link
               ref={button}
               className="text-white text-2xl sm:text-xl opacity-0 translate-y-96 py-3 px-8 sm:py-3 sm:px-6 rounded-md bg-primaryRed"
+              href="#Ponuka"
+              scroll={false}
             >
               Prehliadat Menu
-            </button>
+            </Link>
           </div>
         </div>
       </div>
