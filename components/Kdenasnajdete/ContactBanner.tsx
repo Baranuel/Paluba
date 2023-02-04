@@ -50,7 +50,16 @@ function ContactBanner() {
           </div>
         </div>
       </div>
-      <div className="h-80 bg-primaryRed w-full"></div>
+      <div className=" bg-primaryRed rounded-md w-full">
+        <div className="google-map-code rounded-md">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1285.198010906577!2d18.842784874975468!3d48.588966667619644!2m3!1f0!2f39.07368641868923!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x47152f3ecb252311%3A0x515b05e1214a0c91!2sRozvoz%20Paluba!5e1!3m2!1ssk!2sus!4v1675495771854!5m2!1ssk!2sus"
+            className="w-full h-96 rounded-md"
+            style={{ border: 0 }}
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 }
