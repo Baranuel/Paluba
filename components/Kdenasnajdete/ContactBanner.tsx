@@ -28,7 +28,7 @@ function ContactBanner() {
             width={25}
             height={25}
           />
-          <div className="h-full flex flex-col border-x-2 border-primaryRed/30 text-xl sm:text-sm justify-center sm:min-w-[110px]  w-full items-center text-center">
+          <div className="h-full flex flex-col border-x-2 border-hrColor text-xl sm:text-sm justify-center sm:min-w-[110px]  w-full items-center text-center">
             <p className="sm:text-xs">Po-Pia</p>
             <h4>09:30 - 21:30</h4>
             <p className="sm:text-xs">Po-Pia</p>
