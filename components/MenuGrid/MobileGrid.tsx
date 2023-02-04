@@ -36,7 +36,7 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
           width={25}
           height={25}
         />
-        <h3>Hlavne Chody</h3>
+        <h3>Hlavné Chody</h3>
       </div>
 
       <Splide options={settings} aria-label="My Favorite Images">
