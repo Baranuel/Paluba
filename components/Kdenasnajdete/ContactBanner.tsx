@@ -6,42 +6,42 @@ import phone from "../../assets/phone.svg";
 function ContactBanner() {
   return (
     <div className="flex mt-12 justify-center items-center sm:flex-col gap-4">
-      <div className="flex gap-4 sm:gap-1 bg-bgSecondary h-32 rounded-md border border-primaryRed font-quicksand text-primaryRed font-semibold sm:w-full w-1/4 justify-between items-center">
-        <div className="flex flex-col items-center p-4 sm:p-2 sm:w-1/3 h-full w-full gap-2 ">
+      <div className="flex gap-4 sm:gap-4 bg-bgSecondary h-36 py-4 px-4 rounded-md border border-primaryRed font-quicksand text-primaryRed font-semibold sm:w-full w-1/4 justify-between items-center">
+        <div className="flex flex-col items-center justify-around p-4 sm:p-0 sm:w-1/3 h-full w-full gap-2 ">
           <Image
             className="justify-self-start"
             src={phone}
             alt="hodiny image"
-            width={20}
-            height={20}
+            width={25}
+            height={25}
           />
 
-          <div className="h-full flex justify=center items-center">
+          <div className="h-full text-center flex justify-center items-center">
             <p className="text-xl sm:text-sm">0905 880 900</p>
           </div>
         </div>
-        <div className="flex flex-col  items-center p-4 sm:p-2 sm:px-0 sm:w-1/3  h-full w-full gap-2 ">
+        <div className="flex flex-col  items-center p-4 sm:p-0 sm:px-0 sm:w-1/3  h-full w-full gap-2 ">
           <Image
             className="justify-self-start"
             src={hodinyThick}
             alt="hodiny image"
-            width={20}
-            height={20}
+            width={25}
+            height={25}
           />
-          <div className="h-full flex flex-col border-x-2 border-primaryRed text-xl sm:text-sm justify-center  w-full items-center text-center">
+          <div className="h-full flex flex-col border-x-2 border-primaryRed/30 text-xl sm:text-sm justify-center sm:min-w-[110px]  w-full items-center text-center">
             <p className="sm:text-xs">Po-Pia</p>
             <h4>09:30 - 21:30</h4>
             <p className="sm:text-xs">Po-Pia</p>
             <h4>09:30 - 21:30</h4>
           </div>
         </div>
-        <div className="flex flex-col  items-center p-4 sm:p-2 sm:w-1/3  h-full w-full gap-2">
+        <div className="flex flex-col  items-center p-4 sm:p-0 sm:w-1/3  h-full w-full gap-2">
           <Image
             className="justify-self-start"
             src={pin}
             alt="hodiny image"
-            width={20}
-            height={20}
+            width={25}
+            height={25}
           />
           <div className="h-full flex justify=center items-center">
             <p className="text-xl sm:text-xs text-center font-quicksand text-primaryRed font-semibold">

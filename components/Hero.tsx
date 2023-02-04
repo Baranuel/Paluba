@@ -75,7 +75,7 @@ function Hero() {
             <div ref={div} className="relative flex mb-4">
               <h1
                 ref={text}
-                className=" opacity-0 mt-12 text-8xl sm:text-7xl text-white font-rye flex before:content-['Vita_vas'] before:absolute before:text-4xl before:sm:text-3xl before:-translate-y-12 before:-translate-x-8 before:font-sacramento"
+                className=" opacity-0 mt-12 text-8xl sm:text-7xl xs:text-6xl text-white font-rye flex before:content-['Vita_vas'] before:absolute before:text-4xl before:sm:text-3xl before:-translate-y-12 before:-translate-x-8 before:font-sacramento"
               >
                 Paluba
               </h1>

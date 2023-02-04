@@ -14,14 +14,14 @@ interface HodnotyPageProps {
 
 function HodnotyPage({ isMobile }: HodnotyPageProps) {
   return (
-    <div className="bg-bgSecondary z-1 overflow-hidden relative min-h-content pb-12 px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 ">
+    <div className="bg-bgSecondary z-1 overflow-hidden relative min-h-content pb-12 px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 ">
       <Heading title="Hodnoty" />
       <Image
-        className="sm:m-auto absolute -right-40 top-8 sm:inset-0 w-1/3 sm:top-0 h-content sm:w-full sm:h-1/2 object sm:object-center z-0"
+        className="sm:m-auto xs:m-auto absolute -right-40 top-8 sm:inset-0 xs:inset-0 w-1/3 sm:top-0 xs:top-0 h-content xs:w-full xs:h-1/2 sm:w-full sm:h-1/2 object xs:object-center sm:object-center z-0"
         src={bgPic}
         alt="backgorund pizza image"
       />
-      <div className="mt-12 flex relative sm:flex-wrap gap-2 z-1">
+      <div className="mt-12 flex relative sm:flex-wrap xs:flex-wrap gap-2 z-1">
         <HodnotaCard
           isMobile={isMobile}
           image={hodinyImg}

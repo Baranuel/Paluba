@@ -24,7 +24,8 @@ module.exports = {
         hrColor: "#E7E0CE",
       },
       screens: {
-        sm: { min: "250px", max: "600px" },
+        xs: { max: "359px" },
+        sm: { min: "360px", max: "600px" },
         // => @media (min-width: 640px and max-width: 767px) { ... }
 
         md: { min: "600px", max: "1023px" },
