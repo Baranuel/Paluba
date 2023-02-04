@@ -22,7 +22,9 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
           />
 
           <div className="h-full text-center flex justify-center items-center">
-            <p className="text-2xl md:text-xl sm:text-sm">0905 880 900</p>
+            <p className="text-2xl md:text-xl sm:text-sm font-bold">
+              0905 880 900
+            </p>
           </div>
         </div>
         <div className="flex flex-col  border-y-2 border-hrColor sm:border-y-0 md:border-y-0 sm:border-x-2 md:border-x-2 border-hrColor sm:items-center p-4 sm:p-0 sm:px-0 sm:w-1/3  h-full w-full gap-2 ">
@@ -39,8 +41,8 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
               <h4>09:30 - 21:30</h4>
             </div>
             <div>
-              <p className="sm:text-xs">Po-Pia</p>
-              <h4>09:30 - 21:30</h4>
+              <p className="sm:text-xs">Sob-Ned</p>
+              <h4>12:00 - 21:30</h4>
             </div>
           </div>
         </div>

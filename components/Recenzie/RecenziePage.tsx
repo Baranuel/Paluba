@@ -10,10 +10,18 @@ function RecenziePage() {
       <Heading title="Co o nas hovoria" />
       <div className="grid grid-cols-6 grid-rows-2 ">
         <div className="col-start-1  md:col-start-1 md:col-span-4 sm:col-span-6 sm:col-start-1 sm:row-start-1 xs:col-start-1 xs:col-span-6 xs:row-start-1 col-span-3 lg:col-span-4 self-end p-2">
-          <RecenziaCard />
+          <RecenziaCard
+            author="Lucia Nováková"
+            text="Ich trvanlivosť a popularita svedčia o kvalite ich pizzy, ktorá si
+        získala srdcia miestnych obyvateľov. Ak hľadáte tradičnú a chutnú pizzu,
+        Pizza Paluba je tým správnym miestom."
+          />
         </div>
         <div className="col-start-4 lg:col-start-3 md:col-start-3 sm:col-span-6 sm:col-start-1 sm:row-start-2 md:col-span-4 xs:col-start-1 xs:col-span-6 xs:row-start-2 row-start-2 col-span-3 lg:col-span-4   p-2">
-          <RecenziaCard />
+          <RecenziaCard
+            author="Peter Kováč"
+            text="Paluba je už dlho najoblúbenejším miestom na objednávanie jedla a je jasné, že dôvodom je ich vynikajúce jedlo a spoľahlivá donáška. Sú skutočne profesionálni a robia všetko pre to, aby zákazníci boli spokojní. Určite odporúčam"
+          />
         </div>
       </div>
       <a

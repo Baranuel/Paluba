@@ -16,7 +16,7 @@ function DesktopGrid(props: any) {
           width={25}
           height={25}
         />
-        <h3>Hlavne Chody</h3>
+        <h3>Hlavné Chody</h3>
       </div>
       <div className=" grid grid-cols-3 gid-rows-2 gap-4 w-full mt-4">
         {mainCourse

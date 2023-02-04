@@ -26,31 +26,31 @@ function HodnotyPage({ isMobile }: HodnotyPageProps) {
         <HodnotaCard
           isMobile={isMobile}
           image={hodinyImg}
-          title="Donaska"
+          title="Donáška"
           text="30 min"
         />
         <HodnotaCard
           isMobile={isMobile}
           image={chefImg}
-          title="Skvela Chut"
-          text="Domace recepty"
+          title="Skvelá Chuť"
+          text="Domáce recepty"
         />
         <HodnotaCard
           isMobile={isMobile}
           image={saladImg}
           title="Kvalita"
-          text="Vzdy Fresh"
+          text="Vždy Fresh"
         />
         <HodnotaCard
           isMobile={isMobile}
           image={trofejImg}
           title="Super Pizza"
-          text="Jednotka v okoli"
+          text="Jednotka v okolí"
         />
       </div>
       <div className="relative mt-16 flex flex-col items-start sm:items-center">
         <h2 className="sm:text-2xl text-3xl font-semibold text-center">
-          Fungujeme uz vyse 15 rokov
+          Fungujeme už vyše 15 rokov
         </h2>
         <p className=" w-[74ch] mb-4 sm:w-fit z-1 text-start sm:text-center mt-2 text-lg sm:text-sm">
           V Palube vieme, že nič neprekoná chuť čerstvo upečenej pizze s
@@ -64,7 +64,7 @@ function HodnotyPage({ isMobile }: HodnotyPageProps) {
           scroll={false}
           className="text-white text-2xl sm:text-xl mt-6 py-3 px-8 sm:py-3 sm:px-6 rounded-md bg-primaryRed"
         >
-          Prehliadat Menu
+          Prehliadať Menu
         </Link>
       </div>
     </div>
