@@ -37,12 +37,12 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
           />
           <div className="h-full flex gap-4 sm:gap-0 flex-col  text-2xl md:text-xl sm:text-sm justify-center sm:min-w-[110px] w-full items-center text-center">
             <div>
-              <p className="sm:text-xs">Po-Pia</p>
-              <h4>09:30 - 21:30</h4>
+              <p className="sm:text-xs font-medium">Po-Pia</p>
+              <h4 className="font-bold">09:30 - 21:30</h4>
             </div>
             <div>
-              <p className="sm:text-xs">Sob-Ned</p>
-              <h4>12:00 - 21:30</h4>
+              <p className="sm:text-xs font-medium">Sob-Ned</p>
+              <h4 className="font-bold">12:00 - 21:30</h4>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
             height={isMobile ? 25 : 30}
           />
           <div className="h-full flex justify-center items-center">
-            <p className="text-2xl lg:text-md md:text-xl sm:text-xs text-center font-quicksand text-primaryRed font-semibold">
+            <p className="text-2xl lg:text-md md:text-xl sm:text-xs text-center font-quicksand text-primaryRed font-bold">
               Jilemnického 1130 965 01 Žiar nad Hronom
             </p>
           </div>
