@@ -2,8 +2,6 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import { createClient } from "contentful";
 import MenuGrid from "../components/MenuGrid/MenuGrid";
-import Heading from "../components/Heading";
-import NaseHodnotyPage from "../components/NaseHodnoty/HodnotyPage";
 import HodnotyPage from "../components/NaseHodnoty/HodnotyPage";
 import { useEffect, useState } from "react";
 import RecenziePage from "../components/Recenzie/RecenziePage";

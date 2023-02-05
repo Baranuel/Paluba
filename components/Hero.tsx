@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import HeroPicture from "../assets/hero-picture.jpg";
+import HeroPicture from "../assets/hero-picture.jpeg";
 import { gsap } from "gsap";
 
 function Hero() {
@@ -15,7 +15,7 @@ function Hero() {
   const filter = useRef(null);
   const button = useRef(null);
 
-  const tl = gsap.timeline({ ease: "power3.inOut", delay: 0.5 });
+  const tl = gsap.timeline({ ease: "power3.inOut", delay: 0.2 });
 
   const animate = useCallback(() => {
     tl.to([bigStripe.current, smallStripe.current], {
@@ -65,6 +65,7 @@ function Hero() {
           <Image
             ref={img}
             src={HeroPicture}
+            fill
             alt="hero picture"
             className="w-full h-full absolute opacity-0 z-0 object-cover"
             priority
