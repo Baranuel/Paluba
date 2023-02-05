@@ -6,6 +6,7 @@ import Spinner from "../components/Spinner";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
+  const [appLoaded, setAppLoaded] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -28,7 +29,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {loading && <Spinner />}
-      <Component {...pageProps} />
+      <Component
+        {...pageProps}
+        appLoaded={appLoaded}
+        setAppLoaded={setAppLoaded}
+      />
     </>
   );
 }

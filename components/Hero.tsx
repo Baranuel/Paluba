@@ -4,7 +4,11 @@ import Link from "next/link";
 import HeroPicture from "../assets/hero-picture.jpeg";
 import { gsap } from "gsap";
 
-function Hero() {
+interface HeroProps {
+  appLoaded: boolean;
+}
+
+function Hero({ appLoaded }: HeroProps) {
   const bigStripe = useRef(null);
   const smallStripe = useRef(null);
   const div = useRef(null);
@@ -15,7 +19,11 @@ function Hero() {
   const filter = useRef(null);
   const button = useRef(null);
 
-  const tl = gsap.timeline({ ease: "power3.inOut", delay: 0.2 });
+  const tl = gsap.timeline({
+    ease: "power3.inOut",
+    delay: 0.2,
+    saveStyle: true,
+  });
 
   const animate = useCallback(() => {
     tl.to([bigStripe.current, smallStripe.current], {

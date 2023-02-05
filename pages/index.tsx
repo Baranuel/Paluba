@@ -11,7 +11,7 @@ import Footer from "../components/Footer/Footer";
 export default function Home(props: any) {
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
-  console.log(props);
+
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
     if (window.innerWidth < 600) {
@@ -23,6 +23,7 @@ export default function Home(props: any) {
 
   useEffect(() => {
     handleResize();
+    props.setAppLoaded(true);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [props]);
@@ -36,7 +37,7 @@ export default function Home(props: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-whiteBg">
-        <Hero />
+        <Hero appLoaded={props.appLoaded} />
         <MenuGrid
           isMobile={isMobile}
           windowWidth={windowWidth}

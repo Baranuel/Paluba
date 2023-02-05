@@ -24,6 +24,8 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
     height: 210,
     fixedWidth: windowWidth - 80,
     flickPower: 300,
+    slideFocus: true,
+    focusableNodes: "img",
     gap: "0.5rem",
   };
 
