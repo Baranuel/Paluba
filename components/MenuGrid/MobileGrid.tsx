@@ -60,7 +60,7 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
           })}
       </Splide>
 
-      <hr className="mx-12 mb-4 bg-primaryRed border-t-2 border-bgSecondary" />
+      <hr className="mx-12 mb-4 border-t-1 border-bgSecondary" />
       <div className="self-start  ml-4 items-center flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
         <Image
           className="mr-2"
@@ -88,7 +88,7 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
           );
         })}
       </Splide>
-      <hr className="mx-12 mb-4 border-t-2 border-bgSecondary" />
+      <hr className="mx-12 mb-4 border-t-1 border-bgSecondary" />
     </div>
   );
 }

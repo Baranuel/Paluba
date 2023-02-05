@@ -1,13 +1,34 @@
 import "@/styles/global.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
+import Spinner from "../components/Spinner";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-  return loading ? (
-    <div>Hello</div>
-  ) : (
-    <Component {...pageProps} setLoading={setLoading} loading={loading} />
+  useEffect(() => {
+    const handleStart = (url: string) =>
+      url !== router.asPath && setLoading(true);
+    const handleComplete = (url: string) =>
+      url === router.asPath && setLoading(false);
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
+    };
+  });
+
+  return (
+    <>
+      <Spinner loading={loading} />
+      <Component {...pageProps} />;
+    </>
   );
 }
