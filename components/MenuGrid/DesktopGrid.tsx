@@ -24,7 +24,7 @@ function DesktopGrid(props: any) {
           .reverse()
           .map((item: any, index: number) => {
             return (
-              <div key={index + "div"} className=" col-span-1">
+              <div key={index + "div"} className=" relative col-span-1">
                 <ItemCard
                   key={index + "Item-Card"}
                   title={item.title_id}

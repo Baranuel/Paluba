@@ -11,7 +11,7 @@ import Footer from "../components/Footer/Footer";
 export default function Home(props: any) {
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
-
+  console.log(props);
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
     if (window.innerWidth < 600) {
@@ -25,7 +25,7 @@ export default function Home(props: any) {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [props]);
 
   return (
     <>
