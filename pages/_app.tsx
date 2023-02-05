@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {loading && <Spinner />}
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

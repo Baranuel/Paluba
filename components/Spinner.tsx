@@ -7,7 +7,7 @@ function Spinner() {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, translateY: -10 }}
+        initial={{ opacity: 0, translateY: -30 }}
         animate={{ opacity: 1, translateY: 0 }}
         className="fixed flex top-10 z-10 w-full"
       >
