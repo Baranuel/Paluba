@@ -19,6 +19,7 @@
     "contentful": "^9.2.20",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
+    "framer-motion": "^9.0.1",
     "gsap": "^3.11.4",
     "next": "13.1.5",
     "react": "18.2.0",
