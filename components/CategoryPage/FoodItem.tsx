@@ -14,7 +14,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
       <div className="flex justify-between items-center">
         <div className="flex gap-1 ">
           <p className="font-medium text-md text-bluntGrey font-quicksand">
-            {id}
+            {id}.
           </p>
           <p className="text-md font-medium font-quicksand">{nazov}</p>
         </div>
@@ -27,7 +27,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
           const separator = index === ingrediencie.length - 1 ? "." : ", ";
           return (
             <p key={index} className=" min-w-content text-sm text-bluntGrey">
-              {ingredienca.toLocaleLowerCase()}
+              {ingredienca.toLowerCase().trim()}
               {separator}
             </p>
           );
