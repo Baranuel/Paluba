@@ -20,7 +20,7 @@ module.exports = {
         whiteBg: "#FFFCFC",
         bgSecondary: "#FFF2EC",
         textColor: "#4B4242",
-        bluntGrey: "#6B6B6B",
+        bluntGrey: "#7A7A7A",
         hrColor: "#F5CCCA",
       },
       screens: {
