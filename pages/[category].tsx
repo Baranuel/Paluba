@@ -14,7 +14,7 @@ interface CategoryProps {
 
 function Category({ linkedTo, foodItems }: CategoryProps) {
   const [seeVegetarian, setSeeVegetarian] = useState(false);
-
+  const menuTable = useRef<HTMLDivElement | null>(null);
   const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}`;
   const foodType = linkedTo.Asset[0].fields.title;
 
@@ -25,6 +25,12 @@ function Category({ linkedTo, foodItems }: CategoryProps) {
     "salama",
     "bolonska zmes",
   ];
+
+  useEffect(() => {
+    if (menuTable.current) {
+      menuTable.current.scrollIntoView({});
+    }
+  }, [seeVegetarian]);
 
   const replaceSpecialChars = (text: string) => {
     return text
@@ -50,12 +56,17 @@ function Category({ linkedTo, foodItems }: CategoryProps) {
   return (
     <div className="bg-whiteBg ">
       <HeroSection url={categoryImage} foodType={foodType} />
-      <div className="mt-12 flex flex-col items-center h-screen w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 ">
+      <div
+        ref={menuTable}
+        className="mt-12 flex flex-col items-center h-fit w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 "
+      >
         <Filterbar
           seeVegetarian={seeVegetarian}
           setSeeVegetarian={setSeeVegetarian}
         />
-        <div className="  w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2">
+        <div
+          className={` h-fit w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`}
+        >
           {displayFood.map((item: any, index: number) => (
             <FoodItem key={index} {...item.fields} />
           ))}
