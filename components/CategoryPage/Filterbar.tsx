@@ -9,7 +9,7 @@ interface FilterbarProps {
 
 function Filterbar({ seeVegetarian, setSeeVegetarian }: FilterbarProps) {
   return (
-    <div className="flex sticky top-0 bg-whiteBg justify-between w-full items-center p-2">
+    <div className="flex sticky top-0 z-10 bg-whiteBg justify-between w-full items-center p-2">
       <ToggleChip
         text="Vegetarian"
         active={seeVegetarian}

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { getFoodItems } from "../helpers/getFoodItems";
 import Image from "next/image";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import HeroSection from "../components/CategoryPage/HeroSection";
 import FoodItem from "../components/CategoryPage/FoodItem";
 import ToggleChip from "../components/ToggleChip";
@@ -50,17 +50,18 @@ function Category({ linkedTo, foodItems }: CategoryProps) {
   return (
     <div className="bg-whiteBg ">
       <HeroSection url={categoryImage} foodType={foodType} />
-      <div className="mt-12 flex flex-col items-center w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 ">
+      <div className="mt-12 flex flex-col items-center h-screen w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 ">
         <Filterbar
           seeVegetarian={seeVegetarian}
           setSeeVegetarian={setSeeVegetarian}
         />
-        <div className="min-h-screen w-full">
+        <div className="  w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2">
           {displayFood.map((item: any, index: number) => (
             <FoodItem key={index} {...item.fields} />
           ))}
         </div>
       </div>
+      <div className="min-h-screen">c</div>
     </div>
   );
 }
