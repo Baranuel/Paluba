@@ -9,6 +9,24 @@ export default function App({ Component, pageProps }: AppProps) {
   const [appLoaded, setAppLoaded] = useState(false);
   const router = useRouter();
 
+  const [isMobile, setIsMobile] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+    if (window.innerWidth < 600) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     const handleStart = (url: string) =>
       url !== router.asPath && setLoading(true);
@@ -33,6 +51,8 @@ export default function App({ Component, pageProps }: AppProps) {
         {...pageProps}
         appLoaded={appLoaded}
         setAppLoaded={setAppLoaded}
+        isMobile={isMobile}
+        windowWidth={windowWidth}
       />
     </>
   );

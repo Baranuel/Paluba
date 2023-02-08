@@ -8,25 +8,15 @@ import RecenziePage from "../components/Recenzie/RecenziePage";
 import ContactPage from "../components/Kdenasnajdete/ContactPage";
 import Footer from "../components/Footer/Footer";
 
-export default function Home(props: any) {
-  const [isMobile, setIsMobile] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
+interface homeProps {
+isMobile: boolean;
+windowWidth: number;
+categories: any;
 
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-    if (window.innerWidth < 600) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
+}
 
-  useEffect(() => {
-    handleResize();
-    props.setAppLoaded(true);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [props]);
+export default function Home({ isMobile, windowWidth, ...props }: homeProps) {
+
 
   return (
     <>
@@ -38,7 +28,7 @@ export default function Home(props: any) {
       </Head>
 
       <main className="bg-whiteBg">
-        <Hero appLoaded={props.appLoaded} />
+        <Hero />
         <MenuGrid
           isMobile={isMobile}
           windowWidth={windowWidth}

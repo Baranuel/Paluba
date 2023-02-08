@@ -4,8 +4,8 @@ import Image from "next/image";
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import HeroSection from "../components/CategoryPage/HeroSection";
 import FoodItem from "../components/CategoryPage/FoodItem";
-import ToggleChip from "../components/ToggleChip";
 import Filterbar from "../components/CategoryPage/Filterbar";
+import MobileGrid from "@/components/MenuGrid/MobileGrid";
 import MenuGrid from "@/components/MenuGrid/MenuGrid";
 
 interface CategoryProps {
@@ -21,6 +21,19 @@ function Category({ linkedTo, foodItems, categories, isMobile, windowWidth }: Ca
   const menuTable = useRef<HTMLDivElement | null>(null);
   const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}`;
   const foodType = linkedTo.Asset[0].fields.title;
+
+
+  const sweetFood = categories.filter((item:any) =>
+  ["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
+);
+const foods = categories.filter(
+  (item:any) => !["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
+);
+
+const deserts = sweetFood.map((item:any) => item.fields);
+const mainCourse = foods.map((item:any) => {
+  return item.fields;
+});
 
   const masoveIngrediencie = [
     "sunka",
@@ -66,14 +79,14 @@ function Category({ linkedTo, foodItems, categories, isMobile, windowWidth }: Ca
           setSeeVegetarian={setSeeVegetarian}
         />
         <div
-          className={` h-fit w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`}
+          className={` h-fit  w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`}
         >
           {displayFood.map((item: any, index: number) => (
             <FoodItem key={index} {...item.fields} />
           ))}
         </div>
       </div>
-      <MenuGrid isMobile={isMobile} windowWidth={windowWidth} categories={categories} />
+        <MenuGrid isMobile={isMobile} windowWidth={windowWidth} categories={categories} />
     </div>
   );
 }

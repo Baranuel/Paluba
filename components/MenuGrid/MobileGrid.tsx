@@ -12,6 +12,7 @@ interface MobileGridProps {
 }
 
 function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
+  
   const settings: Options = {
     lazyLoad: "nearby",
     drag: "free",
