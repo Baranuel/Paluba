@@ -5,7 +5,7 @@ import HeroPicture from "../assets/hero-picture.jpeg";
 import { gsap } from "gsap";
 
 interface HeroProps {
-  appLoaded: boolean;
+  appLoaded?: boolean;
 }
 
 function Hero({ appLoaded }: HeroProps) {

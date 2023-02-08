@@ -12,6 +12,7 @@ interface menuProps {
 }
 
 function MenuGrid({ categories, windowWidth, isMobile }: menuProps) {
+  
   const sweetFood = categories.filter((item) =>
     ["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
   );

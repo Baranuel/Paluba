@@ -1,18 +1,22 @@
 import { useRouter } from "next/router";
-import { getFoodItems } from "../helpers/getFoodItems";
+import { getCategories, getFoodItems } from "../helpers/getFoodItems";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import HeroSection from "../components/CategoryPage/HeroSection";
 import FoodItem from "../components/CategoryPage/FoodItem";
 import ToggleChip from "../components/ToggleChip";
 import Filterbar from "../components/CategoryPage/Filterbar";
+import MenuGrid from "@/components/MenuGrid/MenuGrid";
 
 interface CategoryProps {
   foodItems: any;
-  linkedTo?: any;
+  linkedTo: any;
+  categories: any;
+  isMobile: boolean;
+  windowWidth: number;
 }
 
-function Category({ linkedTo, foodItems }: CategoryProps) {
+function Category({ linkedTo, foodItems, categories, isMobile, windowWidth }: CategoryProps) {
   const [seeVegetarian, setSeeVegetarian] = useState(false);
   const menuTable = useRef<HTMLDivElement | null>(null);
   const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}`;
@@ -26,11 +30,7 @@ function Category({ linkedTo, foodItems }: CategoryProps) {
     "bolonska zmes",
   ];
 
-  useEffect(() => {
-    if (menuTable.current) {
-      menuTable.current.scrollIntoView({});
-    }
-  }, [seeVegetarian]);
+
 
   const replaceSpecialChars = (text: string) => {
     return text
@@ -61,6 +61,7 @@ function Category({ linkedTo, foodItems }: CategoryProps) {
         className="mt-12 flex flex-col items-center h-fit w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 "
       >
         <Filterbar
+        menu={menuTable}
           seeVegetarian={seeVegetarian}
           setSeeVegetarian={setSeeVegetarian}
         />
@@ -72,7 +73,7 @@ function Category({ linkedTo, foodItems }: CategoryProps) {
           ))}
         </div>
       </div>
-      <div className="min-h-screen">c</div>
+      <MenuGrid isMobile={isMobile} windowWidth={windowWidth} categories={categories} />
     </div>
   );
 }
@@ -82,9 +83,11 @@ export default Category;
 export async function getServerSideProps({ params }: any) {
   const category = params.category;
   const foodItems = await getFoodItems(category);
+  const categories = await getCategories()
 
   return {
     props: {
+      categories: categories.items,
       linkedTo: foodItems.includes,
       foodItems: foodItems.items,
     },
