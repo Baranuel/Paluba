@@ -86,7 +86,7 @@ const mainCourse = foods.map((item:any) => {
           ))}
         </div>
       </div>
-        <MenuGrid isMobile={isMobile} windowWidth={windowWidth} categories={categories} />
+        <MenuGrid  hasHeading={false} isMobile={isMobile} windowWidth={windowWidth} categories={categories} />
     </div>
   );
 }

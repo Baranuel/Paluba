@@ -8,10 +8,11 @@ import Heading from "../Heading";
 interface menuProps {
   windowWidth: number;
   isMobile: boolean;
+  hasHeading: boolean;
   categories: any[];
 }
 
-function MenuGrid({ categories, windowWidth, isMobile }: menuProps) {
+function MenuGrid({ categories, windowWidth, isMobile, hasHeading }: menuProps) {
   
   const sweetFood = categories.filter((item) =>
     ["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
@@ -29,14 +30,14 @@ function MenuGrid({ categories, windowWidth, isMobile }: menuProps) {
     <>
       {!isMobile && (
         <div className="mt-6 pb-12 mx-24 2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col min-h-screen  items-center ">
-          <Heading title="Ponuka" id="Ponuka" />
+          {hasHeading && <Heading title="Ponuka" id="Ponuka" />}
           <DesktopGrid mainCourse={mainCourse} deserts={deserts} />
         </div>
       )}
 
       {isMobile && (
         <>
-          <Heading title="Ponuka" id="Ponuka" />
+          {hasHeading && <Heading title="Ponuka" id="Ponuka" />}
           <MobileGrid
             windowWidth={windowWidth}
             mainCourse={mainCourse}

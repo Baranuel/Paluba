@@ -30,6 +30,7 @@ export default function Home({ isMobile, windowWidth, ...props }: homeProps) {
       <main className="bg-whiteBg">
         <Hero />
         <MenuGrid
+        hasHeading
           isMobile={isMobile}
           windowWidth={windowWidth}
           categories={props.categories}
