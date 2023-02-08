@@ -17,23 +17,15 @@ interface CategoryProps {
 }
 
 function Category({ linkedTo, foodItems, categories, isMobile, windowWidth }: CategoryProps) {
+  const router = useRouter()
+  console.log(router)
   const [seeVegetarian, setSeeVegetarian] = useState(false);
   const menuTable = useRef<HTMLDivElement | null>(null);
   const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}`;
   const foodType = linkedTo.Asset[0].fields.title;
 
-
-  const sweetFood = categories.filter((item:any) =>
-  ["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
-);
-const foods = categories.filter(
-  (item:any) => !["Palacinky", "Tvarohova Pizza"].includes(item.fields.title_id)
-);
-
-const deserts = sweetFood.map((item:any) => item.fields);
-const mainCourse = foods.map((item:any) => {
-  return item.fields;
-});
+  const possibleCategories = categories.filter((category:any) => category.fields.title_id !== router.query.category )
+  console.log(possibleCategories)
 
   const masoveIngrediencie = [
     "sunka",
@@ -86,7 +78,7 @@ const mainCourse = foods.map((item:any) => {
           ))}
         </div>
       </div>
-        <MenuGrid  hasHeading={false} isMobile={isMobile} windowWidth={windowWidth} categories={categories} />
+        <MenuGrid  hasHeading={false} isMobile={isMobile} windowWidth={windowWidth} categories={possibleCategories} />
     </div>
   );
 }
