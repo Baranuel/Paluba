@@ -16,7 +16,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
           <p className="font-medium text-md text-bluntGrey font-quicksand">
             {id}.
           </p>
-          <p className="text-md font-medium font-quicksand">{nazov}</p>
+          <p className="text-md font-semibold font-quicksand">{nazov}</p>
         </div>
         <h3 className="text-lg text-primaryRed font-medium">
           €{cena.toFixed(2)}
