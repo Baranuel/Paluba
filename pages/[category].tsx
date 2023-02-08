@@ -78,8 +78,11 @@ function Category({ linkedTo, foodItems, categories, isMobile, windowWidth }: Ca
           ))}
         </div>
       </div>
+
         <MenuGrid  hasHeading={false} isMobile={isMobile} windowWidth={windowWidth} categories={possibleCategories} />
-    </div>
+      </div>
+      
+
   );
 }
 

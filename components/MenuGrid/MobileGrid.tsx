@@ -12,7 +12,7 @@ interface MobileGridProps {
 }
 
 function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
-  
+
   const settings: Options = {
     lazyLoad: "nearby",
     drag: "free",
@@ -31,7 +31,7 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
   };
 
   return (
-    <div className="min-h-fit py-12">
+    <div className="min-h-fit">
       <div className="self-start  ml-4 items-center flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
         <Image
           className="mr-2"

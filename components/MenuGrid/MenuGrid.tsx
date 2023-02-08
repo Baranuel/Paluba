@@ -27,7 +27,7 @@ function MenuGrid({ categories, windowWidth, isMobile, hasHeading }: menuProps) 
   });
 
   return (
-    <>
+    <div className="mt-12">
       {!isMobile && (
         <div className="mt-6 pb-12 mx-24 2xl:mx-64 xl:mx-42 md:mx-4 sm:mx-4 flex flex-col min-h-screen  items-center ">
           {hasHeading && <Heading title="Ponuka" id="Ponuka" />}
@@ -45,7 +45,7 @@ function MenuGrid({ categories, windowWidth, isMobile, hasHeading }: menuProps) 
           />
         </>
       )}
-    </>
+    </div>
   );
 }
 
