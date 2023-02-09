@@ -1,12 +1,13 @@
 import { useRouter } from "next/router";
 import { getCategories, getFoodItems } from "../helpers/getFoodItems";
-import Image from "next/image";
+
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import HeroSection from "../components/CategoryPage/HeroSection";
-import FoodItem from "../components/CategoryPage/FoodItem";
-import Filterbar from "../components/CategoryPage/Filterbar";
-import MobileGrid from "@/components/MenuGrid/MobileGrid";
+
 import MenuGrid from "@/components/MenuGrid/MenuGrid";
+import FoodTable from "@/components/CategoryPage/FoodTable";
+import { AnimatePresence } from "framer-motion";
+import Prilohy from "@/components/CategoryPage/Prilohy";
 
 interface CategoryProps {
   foodItems: any;
@@ -18,68 +19,16 @@ interface CategoryProps {
 
 function Category({ linkedTo, foodItems, categories, isMobile, windowWidth }: CategoryProps) {
   const router = useRouter()
-  console.log(router)
   const [seeVegetarian, setSeeVegetarian] = useState(false);
-  const menuTable = useRef<HTMLDivElement | null>(null);
   const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}`;
   const foodType = linkedTo.Asset[0].fields.title;
-
   const possibleCategories = categories.filter((category:any) => category.fields.title_id !== router.query.category )
-  console.log(possibleCategories)
-
-  const masoveIngrediencie = [
-    "sunka",
-    "tuniak",
-    "kuracie maso",
-    "salama",
-    "bolonska zmes",
-  ];
-
-
-
-  const replaceSpecialChars = (text: string) => {
-    return text
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
-  };
-
-  const sortArray = useCallback((array: any) => {
-    return array.sort((a: any, b: any) => {
-      return a.fields.id - b.fields.id;
-    });
-  }, []);
-
-  const vegetarianOnly = foodItems.filter((item: any) => {
-    return !item.fields.ingrediencie.some((ing: any) => {
-      const strippedIngredient = replaceSpecialChars(ing);
-      return masoveIngrediencie.includes(strippedIngredient);
-    });
-  });
-  const displayFood = sortArray(seeVegetarian ? vegetarianOnly : foodItems);
-
+  const [seePrilohy, setSeePrilohy] = useState(false);
   return (
-    <div className="bg-whiteBg ">
-      <HeroSection url={categoryImage} foodType={foodType} />
-      <div
-        ref={menuTable}
-        className="mt-12 flex flex-col items-center h-fit w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 "
-      >
-        <Filterbar
-        menu={menuTable}
-          seeVegetarian={seeVegetarian}
-          setSeeVegetarian={setSeeVegetarian}
-        />
-        <div
-          className={` h-fit  w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`}
-        >
-          {displayFood.map((item: any, index: number) => (
-            <FoodItem key={index} {...item.fields} />
-          ))}
-        </div>
-      </div>
-
-        <MenuGrid  hasHeading={false} isMobile={isMobile} windowWidth={windowWidth} categories={possibleCategories} />
+    <div className="bg-whiteBg relative ">
+        <HeroSection url={categoryImage} foodType={foodType} />
+            <FoodTable seePrilohy={seePrilohy} setSeePrilohy={setSeePrilohy} food={foodItems} seeVegetarian={seeVegetarian} setSeeVegetarian={setSeeVegetarian} />
+           <MenuGrid  hasHeading={false} isMobile={isMobile} windowWidth={windowWidth} categories={possibleCategories} />
       </div>
       
 

@@ -31,8 +31,8 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
   };
 
   return (
-    <div className="min-h-fit">
-      <div className="self-start  ml-4 items-center flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
+    <div className="min-h-fit ">
+      <div className=" self-start ml-4 items-center flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
         <Image
           className="mr-2"
           src={mainCourseIcon}
@@ -43,14 +43,14 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
         <h3>Hlavné Chody</h3>
       </div>
 
-      <Splide options={settings} aria-label="My Favorite Images">
+      <Splide options={settings} className='fixed -z-1' aria-label="My Favorite Images">
         {mainCourse
           .sort()
           .reverse()
           .map((item, index) => {
             return (
               <SplideSlide
-                className="py-1 first:pl-4 last:pr-4"
+                className="py-1  first:pl-4 last:pr-4"
                 key={index + "slide"}
               >
                 <ItemCard

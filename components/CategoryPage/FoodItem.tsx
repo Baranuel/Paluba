@@ -10,7 +10,7 @@ interface FoodItemProps {
 
 function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
   return (
-    <div className="min-h-[85px] flex flex-col justify-center p-2 w-full">
+    <li className="min-h-[85px] flex flex-col justify-center p-2 w-full">
       <div className="flex justify-between items-center">
         <div className="flex gap-1 ">
           <p className="font-medium text-md text-bluntGrey font-quicksand">
@@ -33,7 +33,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
           );
         })}
       </div>
-    </div>
+    </li>
   );
 }
 

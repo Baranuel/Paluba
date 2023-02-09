@@ -9,7 +9,6 @@ interface ItemCardProps {
 function ItemCard(props: ItemCardProps) {
   const image = props?.image?.fields?.file;
   const thumbnail = `https:${image?.url}`;
-  console.log(props);
   return (
     <Link href={props?.title}>
       <div className="min-w-min w-full shadow-md hover:shadow-lg flex  flex-col relative  rounded-xl ">

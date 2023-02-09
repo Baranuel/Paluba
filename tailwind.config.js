@@ -45,6 +45,9 @@ module.exports = {
         "3/10": "30vh",
         "5/10": "50vh",
       },
+      width: {
+        "9/10": "90vw",
+      }
     },
   },
   plugins: [],
