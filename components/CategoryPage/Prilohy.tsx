@@ -8,11 +8,11 @@ interface PrilohyProps {
 
 function Prilohy( {seePrilohy, setSeePrilohy}: PrilohyProps) {
     const ref = useRef<HTMLDivElement>(null)
+    const vw = window.innerWidth
 
     const handleDrag = (() => {
         if (!ref.current) return
 
-        const vw = window.innerWidth
         const { x } = ref.current.getBoundingClientRect()
         const ONE_EIGHT_OF_VW = vw / 8
         if (x > ONE_EIGHT_OF_VW) {
@@ -25,8 +25,9 @@ function Prilohy( {seePrilohy, setSeePrilohy}: PrilohyProps) {
         ref={ref}
         onDragEnd={() => handleDrag()}
         drag='x'
-        dragDirectionLock
-        dragConstraints={{top:0, bottom:0, left:0, right:0}}
+        // dragDirectionLock
+        dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }} 
+        dragElastic={{top: 0, right: 0.4, bottom: 0, left: 0}}
         key='prilohy'
         initial={{translateX: "100%"}}
         animate={{translateX: 0}}
