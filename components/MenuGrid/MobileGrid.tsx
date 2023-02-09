@@ -71,6 +71,9 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
           alt="main course"
           width={25}
           height={25}
+          sizes="(max-width: 900px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
         />
         <h3>Dezerty</h3>
       </div>
