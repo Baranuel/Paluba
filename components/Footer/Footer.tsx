@@ -3,13 +3,15 @@ import Image from "next/image";
 import logo from "../../assets/PalubaLogo.svg";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
+import Link from "next/link";
 
 function Footer() {
   return (
     <footer className="h-44 bg-primaryRed flex justify-between items-center w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2">
-      <a className="w-1/3" href="#">
+      <Link href="#"  className="w-1/3"passHref >
+  
         <Image src={logo} alt="logo"style={{width:'150px', height:'150px'}} />
-      </a>
+      </Link>
       <div className="h-full items-center text-center gap-2 flex flex-col text-xl sm:text-sm justify-center items-center w-1/3 text-white">
         <div>
           <p className="sm:text-sm">Po-Pia</p>

@@ -107,7 +107,6 @@ function Hero({ appLoaded }: HeroProps) {
               ref={button}
               className="text-white text-2xl sm:text-xl opacity-0 translate-y-96 py-3 px-8 sm:py-3 sm:px-6 rounded-md bg-primaryRed"
               href="#Ponuka"
-              scroll={false}
             >
               Vybrať Jedlo
             </Link>

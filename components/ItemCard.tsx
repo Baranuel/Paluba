@@ -15,6 +15,7 @@ function ItemCard(props: ItemCardProps) {
         {image && (
           <div className=" h-64 md:h-44 lg:h-44 sm:h-36 relative rounded-t-xl">
             <Image
+              loading='lazy'
               className="object-cover w-auto h-auto rounded-t-xl "
               src={thumbnail}
               fill

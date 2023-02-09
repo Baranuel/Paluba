@@ -13,8 +13,8 @@ function DesktopGrid(props: any) {
           className="mr-2"
           src={mainCourseIcon}
           alt="main course"
-          width={25}
-          height={25}
+          style={{ width: "25px", height: "25px"}}
+
         />
         <h3>Hlavné Chody</h3>
       </div>
@@ -40,8 +40,8 @@ function DesktopGrid(props: any) {
           className="mr-2"
           src={desertsIcon}
           alt="main course"
-          width={25}
-          height={25}
+          style={{ width: "25px", height: "25px"}}
+
         />
         <h3>Dezerty</h3>
       </div>

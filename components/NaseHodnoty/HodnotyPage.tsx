@@ -61,7 +61,6 @@ function HodnotyPage({ isMobile }: HodnotyPageProps) {
         </p>
         <Link
           href="#Ponuka"
-          scroll={false}
           className="text-white text-2xl sm:text-xl mt-6 py-3 px-8 sm:py-3 sm:px-6 rounded-md bg-primaryRed"
         >
           Vybrať Jedlo
