@@ -23,11 +23,9 @@ function ItemCard(props: ItemCardProps) {
               loading='eager'
               className="object-cover w-auto h-auto rounded-t-xl "
               src={thumbnail}
-              style={{ width: "100%", height: "auto" }}
-              width={0
-              }
-              height={0
-              }
+              style={{ width: "100%", height: "100%" }}
+              width={imgWidth}
+              height={imgHeight}
               alt="item image"
             />
           </div>
