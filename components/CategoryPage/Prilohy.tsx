@@ -10,7 +10,8 @@ function Prilohy( {seePrilohy, setSeePrilohy}: PrilohyProps) {
     const ref = useRef<HTMLDivElement>(null)
     const vw = window.innerWidth
 
-    const handleDrag = (() => {
+    const handleDrag = ((e:Event) => {
+        e.preventDefault()
         if (!ref.current) return
 
         const { x } = ref.current.getBoundingClientRect()
@@ -23,7 +24,7 @@ function Prilohy( {seePrilohy, setSeePrilohy}: PrilohyProps) {
   return (
         <motion.div
         ref={ref}
-        onDragEnd={() => handleDrag()}
+        onDragEnd={(e) => handleDrag(e)}
         drag='x'
         // dragDirectionLock
         dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }} 

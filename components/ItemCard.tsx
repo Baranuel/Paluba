@@ -9,20 +9,24 @@ interface ItemCardProps {
 function ItemCard(props: ItemCardProps) {
   const image = props?.image?.fields?.file;
   const thumbnail = `https:${image?.url}`;
+ const imgWidth = props?.image?.fields.file.details.image.width
+ const imgHeight = props?.image?.fields.file.details.image.height
+
+  console.log(props?.image?.fields.file.details.image.width)
   return (
     <Link href={props?.title}>
       <div className="min-w-min w-full shadow-md hover:shadow-lg flex  flex-col relative  rounded-xl ">
         {image && (
           <div className=" h-64 md:h-44 lg:h-44 sm:h-36 relative rounded-t-xl">
             <Image
-              loading='lazy'
+
+              loading='eager'
               className="object-cover w-auto h-auto rounded-t-xl "
               src={thumbnail}
-              fill
+              style={{ width: "100%", height: "auto" }}
+              width={imgWidth}
+              height={imgHeight}
               alt="item image"
-              sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
             />
           </div>
         )}

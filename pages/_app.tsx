@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Spinner from "../components/Spinner";
 
 export default function App({ Component, pageProps }: AppProps) {
+  
   const [loading, setLoading] = useState(false);
   const [appLoaded, setAppLoaded] = useState(false);
   const router = useRouter();

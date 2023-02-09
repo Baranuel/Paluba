@@ -43,7 +43,7 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
         <h3>Hlavné Chody</h3>
       </div>
 
-      <Splide options={settings} className='fixed -z-1' aria-label="My Favorite Images">
+      <Splide options={settings} className='fixed relative -z-1' aria-label="My Favorite Images">
         {mainCourse
           .sort()
           .reverse()
