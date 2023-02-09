@@ -24,8 +24,10 @@ function ItemCard(props: ItemCardProps) {
               className="object-cover w-auto h-auto rounded-t-xl "
               src={thumbnail}
               style={{ width: "100%", height: "auto" }}
-              width={imgWidth}
-              height={imgHeight}
+              width={0
+              }
+              height={0
+              }
               alt="item image"
             />
           </div>
