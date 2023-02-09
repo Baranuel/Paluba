@@ -19,6 +19,7 @@ function Prilohy( {seePrilohy, setSeePrilohy}: PrilohyProps) {
             setSeePrilohy(false)
         }
     })
+    
   return (
         <motion.div
         ref={ref}

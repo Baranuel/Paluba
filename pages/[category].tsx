@@ -34,7 +34,7 @@ function Category({ linkedTo, foodItems, categories, isMobile, windowWidth }: Ca
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
 
-    <main className="bg-whiteBg relative ">
+    <main className="bg-whiteBg">
         <HeroSection url={categoryImage} foodType={foodType} />
         <FoodTable seePrilohy={seePrilohy} setSeePrilohy={setSeePrilohy} food={foodItems} seeVegetarian={seeVegetarian} setSeeVegetarian={setSeeVegetarian} />
         <MenuGrid  hasHeading={false} isMobile={isMobile} windowWidth={windowWidth} categories={possibleCategories} />

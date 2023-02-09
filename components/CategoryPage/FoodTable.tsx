@@ -55,7 +55,7 @@ function FoodTable({seeVegetarian, setSeeVegetarian, food, seePrilohy, setSeePri
   return (
     <div
         ref={menuTable}
-        className={`mt-12 flex  relative flex-col   items-center h-fit min-h-screen w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 `}>
+        className={`mt-12 flex  relative flex-col items-center h-fit min-h-screen w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 `}>
 
         <Filterbar
          menu={menuTable}
@@ -66,9 +66,7 @@ function FoodTable({seeVegetarian, setSeeVegetarian, food, seePrilohy, setSeePri
         />
 
         <AnimatePresence  initial={false}>
-        {seePrilohy && 
-        <Prilohy setSeePrilohy={setSeePrilohy}
-         seePrilohy={seePrilohy}/> }
+        {seePrilohy &&  <Prilohy setSeePrilohy={setSeePrilohy} seePrilohy={seePrilohy}/> }
         </AnimatePresence>
 
         <ul className={` h-fit w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`} >

@@ -17,8 +17,8 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
             className="justify-self-start"
             src={phone}
             alt="hodiny image"
-            width={isMobile ? 25 : 30}
-            height={isMobile ? 25 : 30}
+            style={{width: isMobile ? "25px" : "30px", height: isMobile ? "25px" : "30px"}}
+
           />
 
           <div className="h-full text-center flex justify-center items-center">
@@ -32,8 +32,8 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
             className="justify-self-start"
             src={hodinyThick}
             alt="hodiny image"
-            width={isMobile ? 25 : 30}
-            height={isMobile ? 25 : 30}
+            style={{width: isMobile ? "25px" : "30px", height: isMobile ? "25px" : "30px"}}
+
           />
           <div className="h-full flex gap-4 sm:gap-0 flex-col  text-2xl md:text-xl sm:text-sm justify-center sm:min-w-[110px] w-full items-center text-center">
             <div>
@@ -51,8 +51,8 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
             className="justify-self-start"
             src={pin}
             alt="hodiny image"
-            width={isMobile ? 25 : 30}
-            height={isMobile ? 25 : 30}
+            style={{width: isMobile ? "25px" : "30px", height: isMobile ? "25px" : "30px"}}
+
           />
           <div className="h-full flex justify-center items-center">
             <p className="text-2xl lg:text-md md:text-xl sm:text-xs text-center font-quicksand text-primaryRed font-bold">

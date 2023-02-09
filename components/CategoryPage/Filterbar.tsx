@@ -11,6 +11,7 @@ interface FilterbarProps {
 }
 
 function Filterbar({ seeVegetarian, setSeeVegetarian, menu, setSeePrilohy, seePrilohy}: FilterbarProps) {
+  
   const handleFilterClick = () => {
     setSeeVegetarian(!seeVegetarian);
     menu.current?.scrollIntoView({  behavior: "auto"});
@@ -19,6 +20,7 @@ function Filterbar({ seeVegetarian, setSeeVegetarian, menu, setSeePrilohy, seePr
   const togglePrilohy = () => {
     setSeePrilohy(!seePrilohy);
   }
+
   return (
     <div className="flex sticky top-0 z-12 bg-whiteBg justify-between w-full items-center py-2">
       <ToggleChip

@@ -22,14 +22,14 @@ function HeroSection({ url, foodType }: HeroSectionProps) {
           </h3>
         </div>
         <div className="flex flex-col mt-2">
-          <div className="flex mt-1">
-            <Image src={truck} alt="truck" width={15} height={15} />
+          <div className="flex items-center mt-1">
+            <Image style={{width:'16px', height:'16px'}} src={truck} alt="truck"  />
             <p className="text-sm font-quicksand ml-2 font-medium">
               Donaska nad 5 eur
             </p>
           </div>
-          <div className="flex mt-1">
-            <Image src={hodinyThick} alt="truck" width={15} height={15} />
+          <div className="flex items-center mt-1">
+            <Image src={hodinyThick} style={{width:'16px', height:'16px'}} alt="truck"  />
             <p className="text-sm font-quicksand ml-2 font-medium">
               Medzi 12:00 - 14:00 Polievka zdarma
             </p>

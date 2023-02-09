@@ -15,13 +15,13 @@ function ItemCard(props: ItemCardProps) {
         {image && (
           <div className=" h-64 md:h-44 lg:h-44 sm:h-36 relative rounded-t-xl">
             <Image
-              className="object-cover rounded-t-xl "
+              className="object-cover w-auto h-auto rounded-t-xl "
               src={thumbnail}
               fill
               alt="item image"
-              sizes="(max-width: 900px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw"
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
             />
           </div>
         )}
