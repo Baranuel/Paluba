@@ -1,4 +1,4 @@
-import React, { Ref, RefObject, useState } from "react";
+import React, { Ref, RefObject, useCallback, useState } from "react";
 import ToggleChip from "../ToggleChip";
 import { FaEye } from "react-icons/fa";
 
@@ -16,15 +16,17 @@ function Filterbar({
   setSeePrilohy,
   menuTable,
 }: FilterbarProps) {
-  const handleSeeVegetarian = () => {
-    setSeeVegetarian(!seeVegetarian);
+  const handleSeeVegetarian = useCallback(() => {
     if (!menuTable?.current) return;
-    menuTable?.current?.scrollIntoView({});
-  };
+    menuTable?.current?.scrollIntoView();
+
+    setSeeVegetarian(!seeVegetarian);
+  }, [menuTable, setSeeVegetarian, seeVegetarian]);
+
   return (
-    <div className="flex sticky top-0 z-10 bg-whiteBg justify-between w-full items-center py-2">
+    <div className="flex sticky top-0 z-10 bg-whiteBg justify-between w-full  items-center py-2">
       <ToggleChip
-        text="Vegetarian"
+        text="Bez mäsa"
         active={seeVegetarian}
         onClick={() => handleSeeVegetarian()}
       />
@@ -33,7 +35,7 @@ function Filterbar({
         className="flex items-center text-primaryRed "
       >
         <FaEye className="text-md mr-1" />
-        <p className="">Prilohy</p>
+        <p className=" font-semibold">Prílohy</p>
       </div>
     </div>
   );

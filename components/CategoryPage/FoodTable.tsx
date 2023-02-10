@@ -28,6 +28,9 @@ function FoodTable({
     "kuracie maso",
     "kuracie prsia",
     "salama",
+    "slanina",
+    "klobasa",
+    "kuracie",
     "bolonska zmes",
   ];
 
