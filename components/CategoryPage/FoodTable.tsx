@@ -1,81 +1,89 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import Filterbar from './Filterbar'
-import FoodItem from './FoodItem';
-import Prilohy from './Prilohy';
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import Filterbar from "./Filterbar";
+import FoodItem from "./FoodItem";
+import Prilohy from "./Prilohy";
 
 interface FoodTableProps {
-    seeVegetarian: boolean;
-    setSeeVegetarian: React.Dispatch<React.SetStateAction<boolean>>;
-    food:any
-    seePrilohy: boolean;
-    setSeePrilohy: React.Dispatch<React.SetStateAction<boolean>>;
+  seeVegetarian: boolean;
+  setSeeVegetarian: React.Dispatch<React.SetStateAction<boolean>>;
+  food: any;
+  seePrilohy: boolean;
+  setSeePrilohy: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function FoodTable({seeVegetarian, setSeeVegetarian, food, seePrilohy, setSeePrilohy}: FoodTableProps ) {
-    const menuTable = useRef<HTMLDivElement | null>(null);
-    const [displayFood, setDisplayFood] = useState(food)
+function FoodTable({
+  seeVegetarian,
+  setSeeVegetarian,
+  food,
+  seePrilohy,
+  setSeePrilohy,
+}: FoodTableProps) {
+  const menuTable = useRef<HTMLDivElement | null>(null);
+  const [displayFood, setDisplayFood] = useState(food);
 
-    const masoveIngrediencie = [
-        "sunka",
-        "tuniak",
-        "kuracie maso",
-        'kuracie prsia',
-        "salama",
-        "bolonska zmes",
-      ];
+  const masoveIngrediencie = [
+    "sunka",
+    "tuniak",
+    "kuracie maso",
+    "kuracie prsia",
+    "salama",
+    "bolonska zmes",
+  ];
 
-      const sortArray = useCallback((array: any) => {
-        return array.sort((a: any, b: any) => {
-          return a.fields.id - b.fields.id;
-        });
-      }, []);
+  const sortArray = useCallback((array: any) => {
+    return array.sort((a: any, b: any) => {
+      return a.fields.id - b.fields.id;
+    });
+  }, []);
 
+  const replaceSpecialChars = (text: string) => {
+    return text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  };
 
-      const replaceSpecialChars = (text: string) => {
-        return text
-          .toLowerCase()
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
-      };
+  const vegetarianOnly = food.filter((item: any) => {
+    return !item.fields?.ingrediencie?.some((ing: any) => {
+      const strippedIngredient = replaceSpecialChars(ing);
+      return masoveIngrediencie.includes(strippedIngredient);
+    });
+  });
 
-    const vegetarianOnly = food.filter((item: any) => {
-        return !item.fields.ingrediencie.some((ing: any) => {
-          const strippedIngredient = replaceSpecialChars(ing);
-          return masoveIngrediencie.includes(strippedIngredient);
-        });
-        });
-
-
-    useEffect(() => {
-        setDisplayFood(sortArray(seeVegetarian ? vegetarianOnly : food))
+  useEffect(() => {
+    setDisplayFood(sortArray(seeVegetarian ? vegetarianOnly : food));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[seeVegetarian, food])
+  }, [seeVegetarian, food]);
 
   return (
     <div
-        ref={menuTable}
-        className={`mt-12 flex  relative flex-col items-center h-fit min-h-screen w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 `}>
+      ref={menuTable}
+      className={`mt-12 flex  relative flex-col items-center h-fit min-h-screen w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 `}
+    >
+      <Filterbar
+        menuTable={menuTable}
+        seeVegetarian={seeVegetarian}
+        setSeeVegetarian={setSeeVegetarian}
+        setSeePrilohy={setSeePrilohy}
+        seePrilohy={seePrilohy}
+      />
 
-        <Filterbar
-         menu={menuTable}
-         seeVegetarian={seeVegetarian}
-         setSeeVegetarian={setSeeVegetarian}
-         setSeePrilohy={setSeePrilohy}
-         seePrilohy={seePrilohy}
-        />
+      <AnimatePresence initial={false}>
+        {seePrilohy && (
+          <Prilohy setSeePrilohy={setSeePrilohy} seePrilohy={seePrilohy} />
+        )}
+      </AnimatePresence>
 
-        <AnimatePresence  initial={false}>
-        {seePrilohy &&  <Prilohy setSeePrilohy={setSeePrilohy} seePrilohy={seePrilohy}/> }
-        </AnimatePresence>
-
-        <ul className={` h-fit w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`} >
-          {displayFood.map((item: any, index: number) => (
-            <FoodItem key={index} {...item.fields} />
-          ))}
-        </ul>
-      </div>
-  )
+      <ul
+        className={` h-fit w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`}
+      >
+        {displayFood.map((item: any, index: number) => (
+          <FoodItem key={index} {...item.fields} />
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default FoodTable
+export default FoodTable;
