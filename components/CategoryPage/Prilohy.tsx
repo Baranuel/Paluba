@@ -1,4 +1,5 @@
 import { AnimatePresence, motion, useDragControls } from "framer-motion";
+import { FaTimes } from "react-icons/fa";
 import React, { useRef } from "react";
 
 interface PrilohyProps {
@@ -25,7 +26,7 @@ function Prilohy({ seePrilohy, setSeePrilohy }: PrilohyProps) {
       ref={ref}
       onDragEnd={(e) => handleDrag(e)}
       drag="x"
-      // dragDirectionLock
+      dragDirectionLock
       dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
       dragElastic={{ top: 0, right: 0.4, bottom: 0, left: 0 }}
       key="prilohy"
@@ -35,8 +36,15 @@ function Prilohy({ seePrilohy, setSeePrilohy }: PrilohyProps) {
       transition={{ duration: 0.45, ease: [0.06, 0.975, 0.195, 0.985] }}
       className="h-screen fixed z-50 top-0 -right-1  right-0  w-9/10 shadow-xl"
     >
-      <div className="bg-white w-full p-2 h-full bg-bgSecondary">
-        <h1>hello</h1>
+      <div className="bg-white w-full p-6 h-full bg-bgSecondary">
+        <div className="flex items-center gap-2">
+          <FaTimes
+            onClick={() => setSeePrilohy(false)}
+            className="text-3xl  font-light"
+          />
+          <h1 className="text-3xl">Prílohy</h1>
+        </div>
+        <div></div>
       </div>
     </motion.div>
   );

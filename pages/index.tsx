@@ -9,15 +9,12 @@ import ContactPage from "../components/Kdenasnajdete/ContactPage";
 import Footer from "../components/Footer/Footer";
 
 interface homeProps {
-isMobile: boolean;
-windowWidth: number;
-categories: any;
-
+  isMobile: boolean;
+  windowWidth: number;
+  categories: any;
 }
 
 export default function Home({ isMobile, windowWidth, ...props }: homeProps) {
-
-
   return (
     <>
       <Head>
@@ -38,7 +35,6 @@ export default function Home({ isMobile, windowWidth, ...props }: homeProps) {
         <RecenziePage />
         <ContactPage isMobile={isMobile} />
       </main>
-      <Footer />
     </>
   );
 }
