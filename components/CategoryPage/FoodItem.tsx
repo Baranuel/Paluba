@@ -10,30 +10,7 @@ interface FoodItemProps {
 
 function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
   return (
-    <li className="min-h-[80px] h-content flex gap-1  p-2 w-full">
-      {/* <div className="flex justify-between items-center">
-        <div className="flex gap-1 ">
-          <p className="font-medium text-md text-bluntGrey font-quicksand">
-            {id}.
-          </p>
-          <p className="text-md font-semibold font-quicksand">{nazov}</p>
-        </div>
-        <h3 className="text-lg text-primaryRed font-medium">
-          €{cena.toFixed(2)}
-        </h3>
-      </div>
-      <div className="flex flex-wrap gap-x-[0.2rem] ">
-        {ingrediencie?.map((ingredienca, index) => {
-          const separator = index === ingrediencie.length - 1 ? "." : ", ";
-          return (
-            <p key={index} className=" min-w-content text-sm text-bluntGrey">
-              {ingredienca.toLowerCase().trim()}
-              {separator}
-            </p>
-          );
-        })}
-      </div> */}
-
+    <li className="min-h-[80px] h-content flex gap-2  p-2 w-full">
       <div className="flex-1">
         <div className="flex gap-x-1">
           <p className="font-medium text-md text-bluntGrey font-quicksand  ">
@@ -41,11 +18,14 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
           </p>
           <p className="text-md font-semibold font-quicksand">{nazov}</p>
         </div>
-        <div className="flex flex-wrap gap-x-[0.2rem] ">
+        <div className="flex flex-wrap gap-x-[0.1rem] ">
           {ingrediencie?.map((ingredienca, index) => {
             const separator = index === ingrediencie.length - 1 ? "." : ", ";
             return (
-              <p key={index} className=" min-w-content text-sm  text-bluntGrey">
+              <p
+                key={index}
+                className=" min-w-content text-[14px]  text-bluntGrey"
+              >
                 {ingredienca.toLowerCase().trim()}
                 {separator}
               </p>
@@ -53,7 +33,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
           })}
         </div>
       </div>
-      <h3 className="text-lg text-primaryRed font-medium">
+      <h3 className="text-md text-primaryRed font-medium">
         €{cena.toFixed(2)}
       </h3>
     </li>

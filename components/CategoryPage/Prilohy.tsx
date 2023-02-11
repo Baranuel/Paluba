@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useDragControls } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 import React, { useRef } from "react";
+import PrilohaItem from "./PrilohaItem";
 
 interface PrilohyProps {
   seePrilohy: boolean;
@@ -34,17 +35,26 @@ function Prilohy({ seePrilohy, setSeePrilohy }: PrilohyProps) {
       animate={{ translateX: 0 }}
       exit={{ translateX: "100%" }}
       transition={{ duration: 0.45, ease: [0.06, 0.975, 0.195, 0.985] }}
-      className="h-screen fixed z-50 top-0 -right-1  right-0  w-9/10 shadow-xl"
+      className="h-full fixed z-50 top-0  -right-1  right-0  w-9/10 shadow-xl"
     >
-      <div className="bg-white w-full p-6 h-full bg-bgSecondary">
-        <div className="flex items-center gap-2">
+      <div className=" w-full  p-6 h-full bg-whiteBg">
+        <div className="flex w-full items-center gap-2">
           <FaTimes
             onClick={() => setSeePrilohy(false)}
-            className="text-3xl  font-light"
+            className="text-2xl font-bold"
           />
-          <h1 className="text-3xl">Prílohy</h1>
+          <h1 className="text-3xl font-semibold font-quicksand ">Prílohy</h1>
         </div>
-        <div></div>
+        <ul className=" mt-8">
+          <PrilohaItem />
+          <PrilohaItem />
+          <PrilohaItem />
+          <PrilohaItem />
+          <PrilohaItem />
+          <PrilohaItem />
+          <PrilohaItem />
+          <PrilohaItem />
+        </ul>
       </div>
     </motion.div>
   );
