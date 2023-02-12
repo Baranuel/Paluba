@@ -23,7 +23,7 @@ function HeroSection({ url, foodType }: HeroSectionProps) {
       <div className="absolute flex flex-col justify-center min-h-[125px] h-fit bg-white p-6 bottom-0 left-0 right-0 mx-auto w-[95vw] shadow-md rounded-md translate-y-8">
         <div className="flex justify-between items-center">
           <h1 className="text-3xl font-sahitya">{foodType}</h1>
-          <h3 className="text-primaryRed font-bold text-xl font-quicksand">
+          <h3 className="text-primaryRed font-bold text-lg font-quicksand">
             0905 880 900
           </h3>
         </div>
