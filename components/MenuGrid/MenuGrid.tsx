@@ -22,7 +22,9 @@ function MenuGrid({
     ["Palacinky", "Tvarohová Pizza"].includes(item.fields.title_id)
   );
   const foods = categories.filter(
-    (item) => !["Palacinky", "Tvarohová Pizza"].includes(item.fields.title_id)
+    (item) =>
+      !["Palacinky", "Tvarohová Pizza"].includes(item.fields.title_id) &&
+      item.fields.title_id !== "Prílohy"
   );
 
   const deserts = sweetFood.map((item) => item.fields);
