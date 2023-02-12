@@ -13,18 +13,18 @@ function PrilohaItem({ cena, nazov, weight, variants }: PrilohaItemProps) {
       <div className="flex flex-col">
         <p className="text-sm font-semibold font-quicksand">{nazov}</p>
         <div className="flex flex-wrap gap-x-1">
-          {/* {variants?.map((variant, index) => {
+          {variants?.map((variant, index) => {
             const separator = index === variants.length - 1 ? "." : ", ";
             return (
-              <p key={index} className="text-sm text-bluntGrey font-quicksand">
+              <p key={index} className="text-xs text-bluntGrey font-quicksand">
                 {variant?.toLowerCase().trim()}
                 {separator}
               </p>
             );
-          })} */}
+          })}
         </div>
       </div>
-      <h3 className="font-bold text-md font-quicksand text-primaryRed">
+      <h3 className="font-bold text-sm font-quicksand text-primaryRed">
         €{cena.toFixed(2)}
       </h3>
     </li>
