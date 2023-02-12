@@ -16,14 +16,13 @@ function ItemCard(props: ItemCardProps) {
     <Link href={props?.title}>
       <div className="min-w-min w-full shadow-md hover:shadow-lg flex  flex-col relative  rounded-xl ">
         {image && (
-          <div className=" h-64 md:h-44 lg:h-44 sm:h-36 relative rounded-t-xl">
+          <div className=" h-64 md:h-44 lg:h-44 sm:h-36 relative overflow-hidden rounded-t-xl">
             <Image
+              priority
               loading="eager"
-              className="object-cover w-auto h-auto rounded-t-xl "
+              className="object-cover w-auto bottom h-auto rounded-t-xl "
               src={thumbnail}
-              style={{ width: "100%", height: "100%" }}
-              width={imgWidth}
-              height={imgHeight}
+              fill
               alt="item image"
             />
           </div>
