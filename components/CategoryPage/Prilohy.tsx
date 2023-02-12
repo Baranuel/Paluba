@@ -56,7 +56,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       animate={{ translateX: 0 }}
       exit={{ translateX: "100%" }}
       transition={{ duration: 0.45, ease: [0.06, 0.975, 0.195, 0.985] }}
-      className="h-screen fixed z-50 top-0  -right-1  bg-whiteBg p-2 flex flex-col  items-center right-0  w-[95%] shadow-xl"
+      className="h-screen fixed z-50 top-0  -right-1  bg-whiteBg p-4 flex flex-col  items-center right-0  w-[95%] shadow-xl"
     >
       <div className="flex w-full items-center p-2 ">
         <FaTimes
