@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.2.5",
     "@next/font": "13.1.5",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",

@@ -67,9 +67,19 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       </div>
       <div className=" w-full  min-h-1/3 p-6  rounded-md">
         <Tabs>
-          <TabList>
-            <Tab>Prílohy</Tab>
-            <Tab>Prílohy k jedlám</Tab>
+          <TabList className="flex items-center mb-4">
+            <Tab
+              className=" p-2 rounded-md mr-2"
+              selectedClassName="text-primaryRed border border-primaryRed"
+            >
+              Prílohy
+            </Tab>
+            <Tab
+              className=" p-2 rounded-md mr-2"
+              selectedClassName="text-primaryRed border border-primaryRed"
+            >
+              Prílohy k jedlám
+            </Tab>
           </TabList>
 
           <TabPanel>
@@ -108,20 +118,6 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
             </ul>
           </TabPanel>
         </Tabs>
-        {/* <ul className="">
-          {prilohy.map((priloha: any, index: number) => {
-            const item = priloha.fields;
-            return (
-              <PrilohaItem
-                variants={item.variants}
-                nazov={item.title}
-                weight={item.weight}
-                cena={item.cena}
-                key={index}
-              />
-            );
-          })}
-        </ul> */}
       </div>
     </motion.div>
   );

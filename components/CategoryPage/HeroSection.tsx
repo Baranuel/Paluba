@@ -5,9 +5,9 @@ import hodinyThick from "../../assets/hodinyThick.svg";
 
 interface HeroSectionProps {
   url: string;
-  foodType: string;
+  foodTitle: string;
 }
-function HeroSection({ url, foodType }: HeroSectionProps) {
+function HeroSection({ url, foodTitle }: HeroSectionProps) {
   return (
     <div className=" relative h-5/10 w-full">
       <div className="w-full relative h-full">
@@ -22,7 +22,7 @@ function HeroSection({ url, foodType }: HeroSectionProps) {
       </div>
       <div className="absolute flex flex-col justify-center min-h-[125px] h-fit bg-white p-6 bottom-0 left-0 right-0 mx-auto w-[95vw] shadow-md rounded-md translate-y-8">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-sahitya">{foodType}</h1>
+          <h1 className="text-3xl font-sahitya">{foodTitle}</h1>
           <h3 className="text-primaryRed font-bold text-lg font-quicksand">
             0905 880 900
           </h3>

@@ -88,7 +88,6 @@ function FoodTable({
         className={` h-fit w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`}
       >
         {displayFood.map((item: any, index: number) => {
-          console.log(item);
           return <FoodItem key={index} {...item.fields} />;
         })}
       </ul>

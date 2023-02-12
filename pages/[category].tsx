@@ -35,14 +35,13 @@ function Category({
   const [seeVegetarian, setSeeVegetarian] = useState(false);
   const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}`;
 
-  const foodType = linkedTo.Asset[0].fields.title;
+  const foodTitle = router.query.category as string;
   const possibleCategories = categories.filter(
     (category: any) =>
       category.fields.title_id !== router.query.category &&
       category.fields.title_id !== "Prílohy"
   );
 
-  console.log(possibleCategories);
   const [seePrilohy, setSeePrilohy] = useState(false);
   return (
     <>
@@ -53,7 +52,7 @@ function Category({
       </Head>
 
       <main className="bg-whiteBg">
-        <HeroSection url={categoryImage} foodType={foodType} />
+        <HeroSection url={categoryImage} foodTitle={foodTitle} />
         <FoodTable
           prilohy={prilohy}
           seePrilohy={seePrilohy}
