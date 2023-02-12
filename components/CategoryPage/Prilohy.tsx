@@ -68,13 +68,15 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
         <Tabs>
           <TabList className="flex items-center mb-4">
             <Tab
-              className="  p-2 rounded-md mr-2"
+              tabIndex="1"
+              className=" p-2 rounded-md mr-2"
               selectedClassName="text-primaryRed border border-primaryRed"
             >
               Prílohy
             </Tab>
             <Tab
-              className="  p-2 rounded-md mr-2"
+              tabIndex="2"
+              className="p-2 rounded-md mr-2"
               selectedClassName="text-primaryRed border border-primaryRed"
             >
               Prílohy k jedlám
