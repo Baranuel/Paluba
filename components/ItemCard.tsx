@@ -20,9 +20,10 @@ function ItemCard(props: ItemCardProps) {
             <Image
               priority
               loading="eager"
-              className="object-cover w-auto bottom h-auto rounded-t-xl "
+              className="object-cover bottom  rounded-t-xl "
               src={thumbnail}
-              fill
+              width={500}
+              height={500}
               alt="item image"
             />
           </div>
