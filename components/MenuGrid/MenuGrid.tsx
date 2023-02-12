@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-// Default theme
 import "@splidejs/splide/css";
 import DesktopGrid from "./DesktopGrid";
 import MobileGrid from "./MobileGrid";

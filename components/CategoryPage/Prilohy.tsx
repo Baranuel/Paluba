@@ -36,7 +36,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
   const prilohyKJedlam = getByTag(prilohy, "prilohyKJedlam");
 
   const prilohyKJedlamSorted = prilohyKJedlam.sort((a: any, b: any) => {
-    return a.fields.cena - b.fields.cena;
+    return b.fields.cena - a.fields.cena;
   });
 
   const basicPrilohySorted = basicPrilohy.sort((a: any, b: any) => {
