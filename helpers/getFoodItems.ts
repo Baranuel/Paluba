@@ -31,3 +31,10 @@ export const getFoodItems = async (category:any) => {
 
     return linkedItemsToCategory;
 }
+
+export const getPrilohy = async () => {
+    const prilohy = await client.getEntries({
+        content_type: "prilohy",
+    })
+    return prilohy;
+}

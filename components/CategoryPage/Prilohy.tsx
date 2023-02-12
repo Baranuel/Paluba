@@ -1,4 +1,7 @@
 import { AnimatePresence, motion, useDragControls } from "framer-motion";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+
 import { FaTimes } from "react-icons/fa";
 import React, { useRef } from "react";
 import PrilohaItem from "./PrilohaItem";
@@ -6,9 +9,10 @@ import PrilohaItem from "./PrilohaItem";
 interface PrilohyProps {
   seePrilohy: boolean;
   setSeePrilohy: (value: any) => void;
+  prilohy: any;
 }
 
-function Prilohy({ seePrilohy, setSeePrilohy }: PrilohyProps) {
+function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
   const ref = useRef<HTMLDivElement>(null);
   const vw = window.innerWidth;
 
@@ -21,6 +25,17 @@ function Prilohy({ seePrilohy, setSeePrilohy }: PrilohyProps) {
       setSeePrilohy(false);
     }
   };
+
+  const getByTag = (arr: any[], tag: string) => {
+    return arr.filter((priloha: any) => {
+      return priloha.metadata.tags[0].sys.id === tag;
+    });
+  };
+  console.log(prilohy);
+  const basicPrilohy = getByTag(prilohy, "prilohy");
+  const prilohyKJedlam = getByTag(prilohy, "prilohyKJedlam");
+
+  console.log(basicPrilohy);
 
   return (
     <motion.div
@@ -45,16 +60,62 @@ function Prilohy({ seePrilohy, setSeePrilohy }: PrilohyProps) {
         <h1 className="text-2xl font-semibold font-quicksand ">Prílohy</h1>
       </div>
       <div className=" w-full  min-h-1/3 p-6  rounded-md">
-        <ul className="">
-          <PrilohaItem />
-          <PrilohaItem />
-          <PrilohaItem />
-          <PrilohaItem />
-          <PrilohaItem />
-          <PrilohaItem />
-          <PrilohaItem />
-          <PrilohaItem />
-        </ul>
+        <Tabs>
+          <TabList>
+            <Tab>Prílohy</Tab>
+            <Tab>Prílohy k jedlám</Tab>
+          </TabList>
+
+          <TabPanel>
+            <ul className="">
+              {basicPrilohy.map((priloha: any, index: number) => {
+                const item = priloha.fields;
+
+                return (
+                  <PrilohaItem
+                    variants={item.variants}
+                    nazov={item.title}
+                    weight={item.weight}
+                    cena={item.cena}
+                    key={index}
+                  />
+                );
+              })}
+            </ul>
+          </TabPanel>
+
+          <TabPanel>
+            <ul className="">
+              {prilohyKJedlam.map((priloha: any, index: number) => {
+                const item = priloha.fields;
+
+                return (
+                  <PrilohaItem
+                    variants={item.variants}
+                    nazov={item.title}
+                    weight={item.weight}
+                    cena={item.cena}
+                    key={index}
+                  />
+                );
+              })}
+            </ul>
+          </TabPanel>
+        </Tabs>
+        {/* <ul className="">
+          {prilohy.map((priloha: any, index: number) => {
+            const item = priloha.fields;
+            return (
+              <PrilohaItem
+                variants={item.variants}
+                nazov={item.title}
+                weight={item.weight}
+                cena={item.cena}
+                key={index}
+              />
+            );
+          })}
+        </ul> */}
       </div>
     </motion.div>
   );

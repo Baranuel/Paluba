@@ -10,6 +10,7 @@ interface FoodTableProps {
   food: any;
   seePrilohy: boolean;
   setSeePrilohy: React.Dispatch<React.SetStateAction<boolean>>;
+  prilohy: any;
 }
 
 function FoodTable({
@@ -18,6 +19,7 @@ function FoodTable({
   food,
   seePrilohy,
   setSeePrilohy,
+  prilohy,
 }: FoodTableProps) {
   const menuTable = useRef<HTMLDivElement | null>(null);
   const [displayFood, setDisplayFood] = useState(food);
@@ -74,7 +76,11 @@ function FoodTable({
 
       <AnimatePresence initial={false}>
         {seePrilohy && (
-          <Prilohy setSeePrilohy={setSeePrilohy} seePrilohy={seePrilohy} />
+          <Prilohy
+            prilohy={prilohy}
+            setSeePrilohy={setSeePrilohy}
+            seePrilohy={seePrilohy}
+          />
         )}
       </AnimatePresence>
 
