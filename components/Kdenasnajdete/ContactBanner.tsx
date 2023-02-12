@@ -17,8 +17,10 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
             className="justify-self-start"
             src={phone}
             alt="hodiny image"
-            style={{width: isMobile ? "25px" : "30px", height: isMobile ? "25px" : "30px"}}
-
+            style={{
+              width: isMobile ? "25px" : "30px",
+              height: isMobile ? "25px" : "30px",
+            }}
           />
 
           <div className="h-full text-center flex justify-center items-center">
@@ -32,17 +34,19 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
             className="justify-self-start"
             src={hodinyThick}
             alt="hodiny image"
-            style={{width: isMobile ? "25px" : "30px", height: isMobile ? "25px" : "30px"}}
-
+            style={{
+              width: isMobile ? "25px" : "30px",
+              height: isMobile ? "25px" : "30px",
+            }}
           />
           <div className="h-full flex gap-4 sm:gap-0 flex-col  text-2xl md:text-xl sm:text-sm justify-center sm:min-w-[110px] w-full items-center text-center">
             <div>
               <p className="sm:text-xs font-medium">Po-Pia</p>
-              <h4 className="font-bold">09:30 - 21:30</h4>
+              <p className="font-bold">09:30 - 21:30</p>
             </div>
             <div>
               <p className="sm:text-xs font-medium">Sob-Ned</p>
-              <h4 className="font-bold">12:00 - 21:30</h4>
+              <p className="font-bold">12:00 - 21:30</p>
             </div>
           </div>
         </div>
@@ -51,8 +55,10 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
             className="justify-self-start"
             src={pin}
             alt="hodiny image"
-            style={{width: isMobile ? "25px" : "30px", height: isMobile ? "25px" : "30px"}}
-
+            style={{
+              width: isMobile ? "25px" : "30px",
+              height: isMobile ? "25px" : "30px",
+            }}
           />
           <div className="h-full flex justify-center items-center">
             <p className="text-2xl lg:text-md md:text-xl sm:text-xs text-center font-quicksand text-primaryRed font-bold">
@@ -64,6 +70,7 @@ function ContactBanner({ isMobile }: ContactBannerProps) {
 
       <div className=" bg-primaryRed rounded-md w-full h-full border border-primaryRed">
         <iframe
+          title="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1285.198010906577!2d18.842784874975468!3d48.588966667619644!2m3!1f0!2f39.07368641868923!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x47152f3ecb252311%3A0x515b05e1214a0c91!2sRozvoz%20Paluba!5e1!3m2!1ssk!2sus!4v1675495771854!5m2!1ssk!2sus"
           className="w-full h-full rounded-md "
           loading="lazy"
