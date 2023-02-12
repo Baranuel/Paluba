@@ -9,10 +9,10 @@ interface PrilohaItemProps {
 
 function PrilohaItem({ cena, nazov, variants }: PrilohaItemProps) {
   return (
-    <li className="w-full min-h-[35px] mb-1 flex gap-x-2 items-start justify-between">
-      <div className="flex flex-col">
-        <p className="text-sm font-semibold font-quicksand">{nazov}</p>
-        <div className="flex flex-wrap gap-x-1">
+    <li className="w-full min-h-[25px]  flex gap-x-4 mb-2  items-start justify-between">
+      <div className="flex flex-col ">
+        <p className="text-sm font-medium font-quicksand">{nazov}</p>
+        <div className="flex flex-wrap gap-x-1 ">
           {variants?.map((variant, index) => {
             const separator = index === variants.length - 1 ? "." : ", ";
             return (
