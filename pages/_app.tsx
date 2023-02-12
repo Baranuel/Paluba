@@ -7,9 +7,7 @@ import Footer from "../components/Footer/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
-  const [appLoaded, setAppLoaded] = useState(false);
   const router = useRouter();
-
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -48,13 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {loading && <Spinner />}
-      <Component
-        {...pageProps}
-        appLoaded={appLoaded}
-        setAppLoaded={setAppLoaded}
-        isMobile={isMobile}
-        windowWidth={windowWidth}
-      />
+      <Component {...pageProps} isMobile={isMobile} windowWidth={windowWidth} />
       <Footer />
     </>
   );
