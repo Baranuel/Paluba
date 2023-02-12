@@ -34,11 +34,15 @@ function Category({
   const router = useRouter();
   const [seeVegetarian, setSeeVegetarian] = useState(false);
   const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}`;
+
   const foodType = linkedTo.Asset[0].fields.title;
   const possibleCategories = categories.filter(
-    (category: any) => category.fields.title_id !== router.query.category
+    (category: any) =>
+      category.fields.title_id !== router.query.category &&
+      category.fields.title_id !== "Prílohy"
   );
 
+  console.log(possibleCategories);
   const [seePrilohy, setSeePrilohy] = useState(false);
   return (
     <>

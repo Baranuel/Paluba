@@ -7,7 +7,7 @@ interface PrilohaItemProps {
   variants: string[];
 }
 
-function PrilohaItem({ cena, nazov, weight, variants }: PrilohaItemProps) {
+function PrilohaItem({ cena, nazov, variants }: PrilohaItemProps) {
   return (
     <li className="w-full min-h-[35px] mb-2 flex gap-x-2 items-start justify-between">
       <div className="flex flex-col">

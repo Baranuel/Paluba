@@ -35,7 +35,13 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
   const basicPrilohy = getByTag(prilohy, "prilohy");
   const prilohyKJedlam = getByTag(prilohy, "prilohyKJedlam");
 
-  console.log(basicPrilohy);
+  const prilohyKJedlamSorted = prilohyKJedlam.sort((a: any, b: any) => {
+    return a.fields.cena - b.fields.cena;
+  });
+
+  const basicPrilohySorted = basicPrilohy.sort((a: any, b: any) => {
+    return b.fields.cena - a.fields.cena;
+  });
 
   return (
     <motion.div
@@ -68,7 +74,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
 
           <TabPanel>
             <ul className="">
-              {basicPrilohy.map((priloha: any, index: number) => {
+              {basicPrilohySorted.map((priloha: any, index: number) => {
                 const item = priloha.fields;
 
                 return (
@@ -86,7 +92,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
 
           <TabPanel>
             <ul className="">
-              {prilohyKJedlam.map((priloha: any, index: number) => {
+              {prilohyKJedlamSorted.map((priloha: any, index: number) => {
                 const item = priloha.fields;
 
                 return (
