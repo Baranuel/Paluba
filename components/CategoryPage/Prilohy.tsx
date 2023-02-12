@@ -66,18 +66,18 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       </div>
       <div className=" w-full  min-h-1/3 p-2 max-h-screen  rounded-md">
         <Tabs>
-          <TabList className="flex items-center mb-4">
+          <TabList className="flex items-center mb-4  ">
             <Tab
               tabIndex="1"
-              className=" p-2 rounded-md mr-2"
-              selectedClassName="text-primaryRed border border-primaryRed"
+              className=" p-2  mr-2"
+              selectedClassName="text-primaryRed border rounded-md border-primaryRed"
             >
               Prílohy
             </Tab>
             <Tab
               tabIndex="2"
-              className="p-2 rounded-md mr-2"
-              selectedClassName="text-primaryRed border border-primaryRed"
+              className="p-2  mr-2"
+              selectedClassName="text-primaryRed border rounded-md border-primaryRed"
             >
               Prílohy k jedlám
             </Tab>
