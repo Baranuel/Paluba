@@ -9,8 +9,6 @@ interface ItemCardProps {
 function ItemCard(props: ItemCardProps) {
   const image = props?.image?.fields?.file;
   const thumbnail = `https:${image?.url}`;
-  const imgWidth = props?.image?.fields.file.details.image.width;
-  const imgHeight = props?.image?.fields.file.details.image.height;
 
   return (
     <Link href={props?.title}>

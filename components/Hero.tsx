@@ -4,11 +4,7 @@ import Link from "next/link";
 import HeroPicture from "../assets/backgroundPizza.webp";
 import { gsap } from "gsap";
 
-interface HeroProps {
-  appLoaded?: boolean;
-}
-
-function Hero({ appLoaded }: HeroProps) {
+function Hero() {
   const bigStripe = useRef(null);
   const smallStripe = useRef(null);
   const div = useRef(null);

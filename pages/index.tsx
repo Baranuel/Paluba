@@ -25,8 +25,8 @@ export default function Home({ isMobile, windowWidth, ...props }: homeProps) {
         <meta name="robots" content="index" />
         <link rel="preconnect" href="https://maps.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="preconnect" href="https://maps.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" />
       </Head>
 
       <main className="bg-whiteBg">
