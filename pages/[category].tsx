@@ -45,10 +45,7 @@ function Category({
       <Head>
         <title>Kategórie</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Sme pizzéria s jedinečnou ponukou jedál. Okrem tradičnej pizzy ponúkame aj rôzne mäsové, rybie a vegánske jedlá, ako aj šaláty a prílohy. Navštívte nás a vyskúšajte náš široký výber jedál pre všetky chute."
-        />
+        <meta name="description" content="Kategória konkrétneho jedla." />
       </Head>
 
       <main className="bg-whiteBg">
