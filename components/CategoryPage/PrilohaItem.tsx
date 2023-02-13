@@ -16,7 +16,10 @@ function PrilohaItem({ cena, nazov, variants }: PrilohaItemProps) {
           {variants?.map((variant, index) => {
             const separator = index === variants.length - 1 ? "." : ", ";
             return (
-              <p key={index} className="text-xs text-bluntGrey font-quicksand">
+              <p
+                key={index}
+                className="text-xs text-bluntGrey font-quicksand font-semibold"
+              >
                 {variant?.toLowerCase().trim()}
                 {separator}
               </p>

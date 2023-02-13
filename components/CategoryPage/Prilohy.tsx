@@ -58,7 +58,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       transition={{ duration: 0.45, ease: [0.06, 0.975, 0.195, 0.985] }}
       className="h-screen fixed z-50 top-0  -right-1  bg-whiteBg p-4 flex flex-col  items-center right-0  w-[95%] shadow-xl"
     >
-      <div className="flex w-full items-center p-2 ">
+      <div className="flex w-full items-center mb-2 ">
         <FaTimes
           onClick={() => setSeePrilohy(false)}
           className="text-2xl font-light mt-2"
@@ -66,17 +66,17 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       </div>
       <div className=" w-full  min-h-1/3 p-2 max-h-screen  rounded-md">
         <Tabs>
-          <TabList className="flex items-center mb-4  ">
+          <TabList className="flex items-center px-2 ">
             <Tab
               tabIndex="1"
-              className=" p-2  mr-2"
+              className=" p-2  font-semibold mr-2"
               selectedClassName="text-primaryRed border rounded-md border-primaryRed"
             >
               Prílohy
             </Tab>
             <Tab
               tabIndex="2"
-              className="p-2  mr-2"
+              className="p-2 font-semibold  mr-2"
               selectedClassName="text-primaryRed border rounded-md border-primaryRed"
             >
               Prílohy k jedlám
@@ -84,7 +84,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
           </TabList>
 
           <TabPanel>
-            <ul className="">
+            <ul className="mt-6 p-2">
               {basicPrilohySorted.map((priloha: any, index: number) => {
                 const item = priloha.fields;
 
@@ -102,7 +102,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
           </TabPanel>
 
           <TabPanel>
-            <ul className="">
+            <ul className="mt-6 p-2">
               {prilohyKJedlamSorted.map((priloha: any, index: number) => {
                 const item = priloha.fields;
 
