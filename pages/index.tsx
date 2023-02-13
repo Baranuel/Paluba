@@ -22,7 +22,6 @@ export default function Home({ isMobile, windowWidth, ...props }: homeProps) {
           name="Paluba Rozvoz"
           content="Sme pizzéria s jedinečnou ponukou jedál. Okrem tradičnej pizzy ponúkame aj rôzne mäsové, rybie a vegánske jedlá, ako aj šaláty a prílohy. Navštívte nás a vyskúšajte náš široký výber jedál pre všetky chute."
         />
-        <meta name="robots" content="index, follow" />
       </Head>
 
       <main className="bg-whiteBg">
