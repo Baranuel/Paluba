@@ -20,7 +20,7 @@ module.exports = {
         whiteBg: "#FFFCFC",
         bgSecondary: "#FFF2EC",
         textColor: "#4B4242",
-        bluntGrey: "#7A7A7A",
+        bluntGrey: "#535353",
         hrColor: "#F5CCCA",
       },
       screens: {
@@ -47,7 +47,7 @@ module.exports = {
       },
       width: {
         "9/10": "90vw",
-      }
+      },
     },
   },
   plugins: [],
