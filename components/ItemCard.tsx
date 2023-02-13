@@ -18,7 +18,6 @@ function ItemCard(props: ItemCardProps) {
         {image && (
           <div className=" h-64 md:h-44 lg:h-44 sm:h-36 relative overflow-hidden rounded-t-xl">
             <Image
-              priority
               loading="lazy"
               className="object-cover bottom rounded-t-xl "
               src={thumbnail}

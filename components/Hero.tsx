@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import HeroPicture from "../assets/hero-picture.jpeg";
+import HeroPicture from "../assets/backgroundPizza.webp";
 import { gsap } from "gsap";
 
 interface HeroProps {
