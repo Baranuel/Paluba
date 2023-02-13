@@ -46,6 +46,7 @@ function Category({
         <title>Kategórie</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Kategória konkrétneho jedla." />
+        <meta name="robots" content="index" />
       </Head>
 
       <main className="bg-whiteBg">
