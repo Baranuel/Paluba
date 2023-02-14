@@ -26,10 +26,10 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
       sm:w-[95vw] shadow-md rounded-md translate-y-8 mx-24 2xl:mx-80 xl:mx-42 md:mx-auto sm:mx-auto xs:m-2 "
       >
         <div className="flex justify-between items-center">
-          <h1 className="sm:text-3xl md:text-4xl text-5xl font-sahitya">
+          <h1 className="sm:text-4xl md:text-4xl text-5xl font-sahitya">
             {foodTitle}
           </h1>
-          <h3 className="text-primaryRed font-bold sm:text-lg  md:text-xl text-2xl font-quicksand">
+          <h3 className="text-primaryRed font-bold sm:text-md  md:text-xl text-2xl font-quicksand">
             0905 880 900
           </h3>
         </div>
@@ -43,7 +43,7 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
               src={truck}
               alt="truck"
             />
-            <p className="sm:text-sm text-xl md:text-md font-quicksand ml-2 font-medium">
+            <p className="sm:text-lg text-xl md:text-md font-quicksand ml-2 font-medium">
               Donaska nad 5 eur
             </p>
           </div>
@@ -56,7 +56,7 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
               }}
               alt="truck"
             />
-            <p className="sm:text-sm text-xl md:text-md  font-quicksand ml-2 font-medium">
+            <p className="sm:text-lg text-xl md:text-md  font-quicksand ml-2 font-medium">
               Medzi 12:00 - 14:00 Polievka zdarma
             </p>
           </div>
