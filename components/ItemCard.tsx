@@ -12,15 +12,15 @@ function ItemCard(props: ItemCardProps) {
 
   return (
     <Link href={props?.title}>
-      <div className="min-w-min w-full shadow-md hover:shadow-lg flex  flex-col relative  rounded-xl ">
+      <div className="min-w-min w-full h-fit shadow-md hover:shadow-lg flex  flex-col rounded-xl ">
         {image && (
-          <div className=" h-64 md:h-44 lg:h-44 sm:h-36 relative overflow-hidden rounded-t-xl">
+          <div className=" h-56 md:h-44 lg:h-44 sm:h-36 h-fit  rounded-t-xl">
             <Image
               loading="lazy"
-              className="object-cover bottom rounded-t-xl "
+              className=" h-full object-cover rounded-t-xl  "
               src={thumbnail}
               width={500}
-              height={500}
+              height={200}
               alt="item image"
             />
           </div>

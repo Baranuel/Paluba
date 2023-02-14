@@ -8,13 +8,12 @@ function DesktopGrid(props: any) {
   const { mainCourse, deserts } = props;
   return (
     <>
-      <div className="self-start  flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
+      <div className="self-start  flex mt-24 sm:mt-8 mb-2 items-center font-semibold sm:text-2xl text-4xl text-primaryRed">
         <Image
           className="mr-2"
           src={mainCourseIcon}
           alt="main course"
-          style={{ width: "25px", height: "25px"}}
-
+          style={{ width: "25px", height: "25px" }}
         />
         <h3>Hlavné Chody</h3>
       </div>
@@ -35,13 +34,12 @@ function DesktopGrid(props: any) {
           })}
       </div>
 
-      <div className="self-start  flex mt-24 sm:mt-8 mb-2 font-semibold sm:text-2xl text-4xl text-primaryRed">
+      <div className="self-start  flex mt-24 sm:mt-8 mb-2 items-center font-semibold sm:text-2xl text-4xl text-primaryRed">
         <Image
           className="mr-2"
           src={desertsIcon}
           alt="main course"
-          style={{ width: "25px", height: "25px"}}
-
+          style={{ width: "25px", height: "25px" }}
         />
         <h3>Dezerty</h3>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Splide, SplideSlide, Options } from "@splidejs/react-splide";
 import ItemCard from "../ItemCard";
 import Image from "next/image";
@@ -12,9 +12,7 @@ interface MobileGridProps {
 }
 
 function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
-
   const settings: Options = {
-    lazyLoad: "nearby",
     drag: "free",
     focus: "center",
     snap: true,
@@ -43,7 +41,11 @@ function MobileGrid({ windowWidth, mainCourse, deserts }: MobileGridProps) {
         <h3>Hlavné Chody</h3>
       </div>
 
-      <Splide options={settings} className='fixed relative -z-1' aria-label="My Favorite Images">
+      <Splide
+        options={settings}
+        className="fixed relative -z-1"
+        aria-label="My Favorite Images"
+      >
         {mainCourse
           .sort()
           .reverse()
