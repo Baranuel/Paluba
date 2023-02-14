@@ -64,7 +64,7 @@ function FoodTable({
   return (
     <div
       ref={menuTable}
-      className={`mt-12 flex  relative flex-col items-center h-fit min-h-screen w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2 `}
+      className={`mt-12 flex relative flex-col items-center h-fit min-h-screen  px-24 2xl:px-80 xl:px-42 md:px-4 sm:px-4 xs:p-2 `}
     >
       <Filterbar
         menuTable={menuTable}
@@ -84,9 +84,7 @@ function FoodTable({
         )}
       </AnimatePresence>
 
-      <ul
-        className={` h-fit w-screen px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2`}
-      >
+      <ul className={` h-fit w-full`}>
         {displayFood.map((item: any, index: number) => {
           return <FoodItem key={index} {...item.fields} />;
         })}

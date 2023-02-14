@@ -24,7 +24,7 @@ function Filterbar({
   }, [menuTable, setSeeVegetarian, seeVegetarian]);
 
   return (
-    <div className="flex sticky -top-1 z-10 bg-whiteBg justify-between w-screen  items-center py-3 px-6">
+    <div className="flex sticky -top-1 z-10 bg-whiteBg justify-between sm:w-screen w-full  items-center pb-3 py-3 px-26 sm:px-6">
       <ToggleChip
         text="Bez mäsa"
         active={seeVegetarian}
@@ -32,10 +32,10 @@ function Filterbar({
       />
       <div
         onClick={() => setSeePrilohy(true)}
-        className="flex items-center text-primaryRed "
+        className="flex items-center text-primaryRed  hover:cursor-pointer "
       >
-        <FaEye className="text-md mr-1" />
-        <p className=" font-quicksand font-bold">Prílohy</p>
+        <FaEye className="sm:text-lg text-xl mr-1" />
+        <p className=" sm:text-lg text-xl font-quicksand font-bold">Prílohy</p>
       </div>
     </div>
   );

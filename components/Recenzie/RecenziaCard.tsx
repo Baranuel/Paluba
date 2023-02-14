@@ -11,7 +11,7 @@ function RecenziaCard({ text, author }: RecenziaCardProps) {
       <h1 className="font-rye text-8xl sm:text-5xl self-center flex  text-primaryRed">
         {'"'}
       </h1>
-      <p className=" px-16 md:px-4 sm:px-2 sm:text-sm md:text-lg text-xl text-center font-quicksand font-semibold">
+      <p className=" px-16 md:px-4 sm:px-0 sm:ml-4 sm:text-sm md:text-lg text-xl text-center sm:text-start font-quicksand font-semibold">
         {" "}
         {text}
       </p>

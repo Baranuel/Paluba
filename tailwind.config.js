@@ -21,6 +21,7 @@ module.exports = {
         bgSecondary: "#FFF2EC",
         textColor: "#4B4242",
         bluntGrey: "#535353",
+        drawerBg: "#FFF9F6",
         hrColor: "#F5CCCA",
       },
       screens: {

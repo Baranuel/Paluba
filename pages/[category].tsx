@@ -51,8 +51,12 @@ function Category({
         <meta name="robots" content="index" />
       </Head>
 
-      <main className="bg-whiteBg">
-        <HeroSection url={categoryImage} foodTitle={foodTitle} />
+      <main className="bg-whiteBg  ">
+        <HeroSection
+          isMobile={isMobile}
+          url={categoryImage}
+          foodTitle={foodTitle}
+        />
         <FoodTable
           prilohy={prilohy}
           seePrilohy={seePrilohy}

@@ -13,7 +13,10 @@ function HodnotaCard({ image, title, text, isMobile }: HodnotaCardProps) {
     <div className=" bg-bgSecondary z-1 p-4 md:p-2 sm:py-3 sm:px-2 xs:p-1 flex sm:min-w-[40%] sm:max-w-[48%] w-1/4 grow border rounded-lg border-primaryRed items-center">
       <Image
         className="mr-2"
-        style={{width: isMobile ? "35px" : "50px", height: isMobile ? "30px" : "50px"}}
+        style={{
+          width: isMobile ? "35px" : "50px",
+          height: isMobile ? "30px" : "50px",
+        }}
         src={image}
         alt="hodnota image"
       />

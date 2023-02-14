@@ -31,7 +31,6 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       return priloha.metadata.tags[0].sys.id === tag;
     });
   };
-  console.log(prilohy);
   const basicPrilohy = getByTag(prilohy, "prilohy");
   const prilohyKJedlam = getByTag(prilohy, "prilohyKJedlam");
 
@@ -56,7 +55,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       animate={{ translateX: 0 }}
       exit={{ translateX: "100%" }}
       transition={{ duration: 0.45, ease: [0.06, 0.975, 0.195, 0.985] }}
-      className="h-screen fixed z-50 top-0  -right-1  bg-whiteBg p-4 flex flex-col  items-center right-0  w-[95%] shadow-xl"
+      className="h-screen fixed z-50 top-0  -right-1  bg-drawerBg  p-4 flex flex-col  items-center right-0  sm:w-[95%] w-1/3 shadow-xl"
     >
       <div className="flex w-full items-center mb-2 ">
         <FaTimes
@@ -64,19 +63,19 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
           className="text-2xl font-light mt-2"
         />
       </div>
-      <div className=" w-full  min-h-1/3 p-2 max-h-screen  rounded-md">
+      <div className=" w-full min-h-1/3 p-2 max-h-screen  rounded-md">
         <Tabs>
           <TabList className="flex items-center px-2 ">
             <Tab
               tabIndex="1"
-              className=" p-2  font-semibold mr-2"
+              className=" p-2 font-semibold mr-2 text-lg sm:text-md hover:cursor-pointer"
               selectedClassName="text-primaryRed border rounded-md border-primaryRed"
             >
               Prílohy
             </Tab>
             <Tab
               tabIndex="2"
-              className="p-2 font-semibold  mr-2"
+              className="p-2 font-semibold  mr-2 text-lg sm:text-md hover:cursor-pointer"
               selectedClassName="text-primaryRed border rounded-md border-primaryRed"
             >
               Prílohy k jedlám
