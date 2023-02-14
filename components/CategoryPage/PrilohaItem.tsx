@@ -9,7 +9,7 @@ interface PrilohaItemProps {
 
 function PrilohaItem({ cena, nazov, variants }: PrilohaItemProps) {
   return (
-    <li className="w-full min-h-[30px]  flex gap-x-4 mb-2  items-start justify-between">
+    <li className="w-full sm:min-h-[30px] min-h-[40px]  flex gap-x-4 mb-2  items-start justify-between">
       <div className="flex flex-col ">
         <p className="sm:text-sm text-lg font-medium font-quicksand">{nazov}</p>
         <div className="flex flex-wrap gap-x-1 ">

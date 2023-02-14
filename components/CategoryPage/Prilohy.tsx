@@ -55,12 +55,12 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       animate={{ translateX: 0 }}
       exit={{ translateX: "100%" }}
       transition={{ duration: 0.45, ease: [0.06, 0.975, 0.195, 0.985] }}
-      className="h-screen fixed z-50 top-0  -right-1  bg-drawerBg  p-4 flex flex-col  items-center right-0  sm:w-[95%] w-1/3 shadow-xl"
+      className="h-screen fixed z-50 top-0  -right-1  bg-drawerBg  p-4 flex flex-col  items-center right-0  sm:w-[95%] w-1/3 md:w-2/3 lg:w-1/2 shadow-xl"
     >
       <div className="flex w-full items-center mb-2 ">
         <FaTimes
           onClick={() => setSeePrilohy(false)}
-          className="text-2xl font-light mt-2"
+          className="text-2xl font-light mt-2 hover:cursor-pointer"
         />
       </div>
       <div className=" w-full min-h-1/3 p-2 max-h-screen  rounded-md">
