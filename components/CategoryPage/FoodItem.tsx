@@ -26,7 +26,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
             return (
               <p
                 key={index}
-                className=" min-w-content sm:text-[14px] text-[18px]  text-bluntGrey"
+                className=" min-w-content sm:text-md  text-[18px]  text-bluntGrey"
               >
                 {ingredienca.toLowerCase().trim()}
                 {separator}
