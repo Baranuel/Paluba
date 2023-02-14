@@ -43,7 +43,7 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
               src={truck}
               alt="truck"
             />
-            <p className="sm:text-lg text-xl md:text-md font-quicksand ml-2 font-medium">
+            <p className="sm:text-sm text-xl md:text-md font-quicksand ml-2 font-medium">
               Donaska nad 5 eur
             </p>
           </div>
@@ -56,7 +56,7 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
               }}
               alt="truck"
             />
-            <p className="sm:text-lg text-xl md:text-md  font-quicksand ml-2 font-medium">
+            <p className="sm:text-sm text-xl md:text-md  font-quicksand ml-2 font-medium">
               Medzi 12:00 - 14:00 Polievka zdarma
             </p>
           </div>
