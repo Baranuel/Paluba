@@ -64,18 +64,18 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
         />
       </div>
       <div className=" w-full min-h-1/3 p-2 max-h-screen  rounded-md">
-        <Tabs>
-          <TabList className="flex items-center px-2 ">
+        <Tabs className='mt-'>
+          <TabList className="flex items-center px-4 sm:px-2 ">
             <Tab
               tabIndex="1"
-              className=" p-2 font-semibold mr-2 text-lg sm:text-md hover:cursor-pointer"
+              className=" p-2 font-semibold mr-2 text-md sm:text-md hover:cursor-pointer"
               selectedClassName="text-primaryRed border rounded-md border-primaryRed"
             >
               Prílohy
             </Tab>
             <Tab
               tabIndex="2"
-              className="p-2 font-semibold  mr-2 text-lg sm:text-md hover:cursor-pointer"
+              className="p-2 font-semibold  mr-2 text-md sm:text-md hover:cursor-pointer"
               selectedClassName="text-primaryRed border rounded-md border-primaryRed"
             >
               Prílohy k jedlám
@@ -83,7 +83,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
           </TabList>
 
           <TabPanel>
-            <ul className="mt-6 p-2">
+            <ul className="mt-4 sm:mt-2 p-4 sm:p-2">
               {basicPrilohySorted.map((priloha: any, index: number) => {
                 const item = priloha.fields;
 
@@ -101,7 +101,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
           </TabPanel>
 
           <TabPanel>
-            <ul className="mt-6 p-2">
+            <ul className="mt-4 sm:mt-2 p-2">
               {prilohyKJedlamSorted.map((priloha: any, index: number) => {
                 const item = priloha.fields;
 

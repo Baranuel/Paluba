@@ -35,7 +35,7 @@ function Filterbar({
         className="flex items-center text-primaryRed  hover:cursor-pointer "
       >
         <FaEye className="sm:text-lg text-xl mr-1" />
-        <p className=" sm:text-lg text-xl font-quicksand font-bold">Prílohy</p>
+        <p className=" sm:text-md text-md font-quicksand font-bold">Prílohy</p>
       </div>
     </div>
   );
