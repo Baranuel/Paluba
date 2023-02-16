@@ -24,7 +24,7 @@ function Filterbar({
   }, [menuTable, setSeeVegetarian, seeVegetarian]);
 
   return (
-    <div className="flex sticky -top-1 z-10 bg-whiteBg justify-between   w-[40vw]  md:w-[70vw] lg:w-[60vw]  sm:w-full  items-center pb-3 py-3 px-26 sm:px-2">
+    <div className="flex sticky -top-1 z-10 bg-whiteBg justify-between   w-[40vw]  md:w-[90vw] lg:w-[70vw]  sm:w-full  items-center pb-3 py-3 px-26 sm:px-2">
       <ToggleChip
         text="Bez mäsa"
         active={seeVegetarian}
