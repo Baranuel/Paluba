@@ -34,7 +34,7 @@ function Filterbar({
         onClick={() => setSeePrilohy(true)}
         className="flex items-center text-primaryRed  hover:cursor-pointer "
       >
-        <FaEye className="sm:text-lg text-xl mr-1" />
+        <FaEye className="sm:text-md text-md mr-1" />
         <p className=" sm:text-md text-md font-quicksand font-bold">Prílohy</p>
       </div>
     </div>
