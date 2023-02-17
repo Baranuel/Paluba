@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="h-44 bg-primaryRed flex justify-between items-center w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2">
+    <footer className="h-44 bg-primaryRed flex  justify-between items-center w-full px-24 2xl:px-64 xl:px-42 md:px-4 sm:px-4 xs:p-2">
       <Link href="#" className="w-1/3" passHref>
         <Image
           src={logo}
