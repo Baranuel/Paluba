@@ -29,6 +29,8 @@ function FoodTable({
     "tuniak",
     "kuracie maso",
     "kuracie prsia",
+    "kuracie prsia(marinovane)",
+    "bravcove maso",
     "salama",
     "slanina",
     "klobasa",
