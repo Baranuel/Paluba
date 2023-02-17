@@ -10,8 +10,8 @@ interface FoodItemProps {
 
 function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
   return (
-    <li className="sm:min-h-[65px] h-[80px] min-h-[75px]  h-content flex gap-2 sm:border-none  border-t border-primaryRed/5  p-2 w-full">
-      <div className="flex-1">
+    <li className="sm:min-h-[80px] min-h-[80px]  h-content flex gap-2   border-t border-primaryRed/5  p-2 w-full">
+      <div className="flex-1 mt-2">
         <div className="flex gap-x-1">
           <p className="font-medium text-md text-bluntGrey font-quicksand  ">
             {id}.
@@ -33,7 +33,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
           })}
         </div>
       </div>
-      <h3 className="text-md text-primaryRed font-medium">
+      <h3 className="text-md mt-2 text-primaryRed font-medium">
         €{cena.toFixed(2)}
       </h3>
     </li>
