@@ -23,7 +23,7 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
       </div>
       <div
         className="absolute flex flex-col justify-center sm:min-h-[125px] w-[40vw] h-fit bg-white p-10 sm:p-6 mx-auto bottom-0 left-0 right-0 
-      sm:w-[95vw] md:w-[70vw] lg:w-[60vw] shadow-md rounded-md translate-y-8"
+      sm:w-[95vw] md:w-[90vw] lg:w-[70vw] shadow-md rounded-md translate-y-8"
       >
         <div className="flex justify-between items-center">
           <h1 className="sm:text-4xl md:text-4xl text-5xl font-sahitya">

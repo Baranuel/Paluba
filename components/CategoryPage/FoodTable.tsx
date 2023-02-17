@@ -29,8 +29,6 @@ function FoodTable({
     "tuniak",
     "kuracie maso",
     "kuracie prsia",
-    "kuracie prsia(marinovane)",
-    "bravcové maso",
     "salama",
     "slanina",
     "klobasa",
@@ -86,7 +84,7 @@ function FoodTable({
         )}
       </AnimatePresence>
 
-      <ul className={` h-fit sm:w-full w-[40vw] md:w-[70vw]  lg:w-[60vw]`}>
+      <ul className={` h-fit sm:w-full w-[40vw] md:w-[90vw] lg:w-[70vw]`}>
         {displayFood.map((item: any, index: number) => {
           return <FoodItem key={index} {...item.fields} />;
         })}
