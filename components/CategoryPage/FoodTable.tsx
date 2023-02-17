@@ -30,7 +30,7 @@ function FoodTable({
     "kuracie maso",
     "kuracie prsia",
     "kuracie prsia(marinovane)",
-    "bravcove maso",
+    "bravcove mäso",
     "salama",
     "slanina",
     "klobasa",
