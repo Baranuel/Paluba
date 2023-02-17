@@ -26,11 +26,12 @@ function FoodTable({
 
   const masoveIngrediencie = [
     "sunka",
+    "parmska sunka",
     "tuniak",
     "kuracie maso",
     "kuracie prsia",
     "kuracie prsia(marinovane)",
-    "bravcove mäso",
+    "bravcove maso",
     "salama",
     "slanina",
     "klobasa",
