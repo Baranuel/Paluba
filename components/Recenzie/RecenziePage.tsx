@@ -3,6 +3,7 @@ import React from "react";
 import Heading from "../Heading";
 import RecenziaCard from "./RecenziaCard";
 import externalLink from "../../assets/externalLink.svg";
+import Link from "next/link";
 
 function RecenziePage() {
   return (
@@ -24,8 +25,9 @@ function RecenziePage() {
           />
         </div>
       </div>
-      <a
-        href="#"
+      <Link
+        target="blank"
+        href="https://www.google.com/search?q=palubarroz&oq=pal&aqs=chrome.3.69i60j46i39i175i199j69i57j69i59j0i512j69i60l3.1969j0j4&sourceid=chrome&ie=UTF-8#lrd=0x47152f3ecb252311:0x515b05e1214a0c91,1,,,,"
         className="flex mt-6 sm:justify-center justify-end items-center"
       >
         <h1 className=" mr-2 text-2xl sm:text-xl text-primaryRed underline">
@@ -37,7 +39,7 @@ function RecenziePage() {
           width={20}
           height={20}
         />
-      </a>
+      </Link>
     </div>
   );
 }
