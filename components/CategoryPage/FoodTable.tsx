@@ -57,7 +57,6 @@ function FoodTable({
   const vegetarianOnly = food.filter((item: any) => {
     return !item.fields?.ingrediencie?.some((ing: any) => {
       const strippedIngredient = replaceSpecialChars(ing);
-      console.log(strippedIngredient);
       return masoveIngrediencie.includes(strippedIngredient);
     });
   });

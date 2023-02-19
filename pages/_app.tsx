@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import Spinner from "../components/Spinner";
 import Footer from "../components/Footer/Footer";
+import Navigation from "../components/Navigation";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
