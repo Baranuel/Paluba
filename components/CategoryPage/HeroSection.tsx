@@ -39,7 +39,7 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
             <h1 className="sm:text-xl md:text-4xl text-4xl font-quicksand font-semibold">
               {foodTitle}
             </h1>
-            <h3 className="text-primaryRed font-semibold sm:text-xl  md:text-xl text-2xl font-quicksand">
+            <h3 className="text-primaryRed font-medium sm:text-xl  md:text-xl text-2xl font-quicksand">
               0905 880 900
             </h3>
           </div>
