@@ -34,12 +34,12 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
           <FaArrowLeft className="text-xl" />
           <p className="text-xl font-semibold font-quicksand ">Domov</p>
         </Link>
-        <div className="p-8 bg-white shadow-md rounded-md">
-          <div className="flex justify-between items-center">
-            <h1 className="sm:text-4xl md:text-4xl text-5xl font-sahitya">
+        <div className="p-8 sm:p-6 bg-white shadow-md rounded-md">
+          <div className="flex sm:flex-wrap gap-2 justify-between items-center">
+            <h1 className="sm:text-xl md:text-4xl text-4xl font-quicksand font-semibold">
               {foodTitle}
             </h1>
-            <h3 className="text-primaryRed font-bold sm:text-md  md:text-xl text-2xl font-quicksand">
+            <h3 className="text-primaryRed font-semibold sm:text-xl  md:text-xl text-2xl font-quicksand">
               0905 880 900
             </h3>
           </div>
