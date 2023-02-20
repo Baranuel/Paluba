@@ -10,13 +10,15 @@ interface FoodItemProps {
 
 function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
   return (
-    <li className="sm:min-h-[80px] min-h-[80px]  h-content flex gap-2   border-t border-primaryRed/5  p-2 w-full">
+    <li className=" min-h-[80px]  h-content flex gap-2   border-t border-primaryRed/5  p-2 w-full">
       <div className="flex-1 mt-2">
         <div className="flex gap-x-1">
-          <p className="font-medium text-md text-bluntGrey font-quicksand  ">
+          <p className="font-medium sm:text-md text-lg text-bluntGrey font-quicksand  ">
             {id}.
           </p>
-          <p className="text-md font-semibold font-quicksand">{nazov}</p>
+          <p className="sm:text-[15px] text-lg font-semibold font-quicksand">
+            {nazov}
+          </p>
         </div>
         <div className="flex flex-wrap gap-x-[0.1rem] ">
           {ingrediencie?.map((ingredienca, index) => {
@@ -24,7 +26,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
             return (
               <p
                 key={index}
-                className=" min-w-content text-[14px]  text-bluntGrey"
+                className=" min-w-content sm:text-[14px]  text-md text-bluntGrey"
               >
                 {ingredienca.toLowerCase().trim()}
                 {separator}
@@ -33,7 +35,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
           })}
         </div>
       </div>
-      <h3 className="text-md mt-2 text-primaryRed font-medium">
+      <h3 className="sm:text-[15px] text-md mt-2 text-primaryRed font-medium">
         €{cena.toFixed(2)}
       </h3>
     </li>

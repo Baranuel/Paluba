@@ -57,29 +57,29 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
       transition={{ duration: 0.45, ease: [0.06, 0.975, 0.195, 0.985] }}
       className="h-screen fixed z-50 top-0  -right-1  bg-drawerBg  p-4 flex flex-col  items-center right-0  sm:w-[95%] w-1/3 md:w-2/3 lg:w-1/2 shadow-xl"
     >
-      <div className="flex w-full items-center mb-2 ">
-        <FaTimes
-          onClick={() => setSeePrilohy(false)}
-          className="text-2xl font-light mt-2 hover:cursor-pointer"
-        />
-      </div>
       <div className=" w-full min-h-1/3 p-2 max-h-screen  rounded-md">
-        <Tabs className="mt-">
-          <TabList className="flex items-center px-4 sm:px-2 ">
-            <Tab
-              tabIndex="1"
-              className=" p-2 font-semibold mr-2 text-md sm:text-md hover:cursor-pointer"
-              selectedClassName="text-primaryRed border rounded-md border-primaryRed"
-            >
-              Prílohy
-            </Tab>
-            <Tab
-              tabIndex="2"
-              className="p-2 font-semibold  mr-2 text-md sm:text-md hover:cursor-pointer"
-              selectedClassName="text-primaryRed border rounded-md border-primaryRed"
-            >
-              Prílohy k jedlám
-            </Tab>
+        <Tabs className="">
+          <TabList className="flex items-center justify-between  ">
+            <div className="flex items-center px-4 sm:px-2 ">
+              <Tab
+                tabIndex="1"
+                className=" p-2 font-semibold mr-2 text-md sm:text-md hover:cursor-pointer"
+                selectedClassName="text-primaryRed border rounded-md border-primaryRed"
+              >
+                Prílohy
+              </Tab>
+              <Tab
+                tabIndex="2"
+                className="p-2 font-semibold  mr-2 text-md sm:text-md hover:cursor-pointer"
+                selectedClassName="text-primaryRed border rounded-md border-primaryRed"
+              >
+                Prílohy k jedlám
+              </Tab>
+            </div>
+            <FaTimes
+              onClick={() => setSeePrilohy(false)}
+              className="text-2xl  font-light  hover:cursor-pointer"
+            />
           </TabList>
 
           <TabPanel className="">
