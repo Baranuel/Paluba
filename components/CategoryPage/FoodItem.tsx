@@ -13,7 +13,7 @@ function FoodItem({ id, cena, nazov, ingrediencie, alergeny }: FoodItemProps) {
     <li className=" min-h-[80px]  h-content flex gap-2   border-t border-primaryRed/5  p-2 w-full">
       <div className="flex-1 mt-2">
         <div className="flex gap-x-1">
-          <p className="font-medium sm:text-md text-lg text-bluntGrey font-quicksand  ">
+          <p className="font-medium sm:text-[15px] text-lg text-bluntGrey font-quicksand  ">
             {id}.
           </p>
           <p className="sm:text-[15px] text-lg font-semibold font-quicksand">
