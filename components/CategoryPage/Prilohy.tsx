@@ -64,7 +64,7 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
         />
       </div>
       <div className=" w-full min-h-1/3 p-2 max-h-screen  rounded-md">
-        <Tabs className='mt-'>
+        <Tabs className="mt-">
           <TabList className="flex items-center px-4 sm:px-2 ">
             <Tab
               tabIndex="1"
@@ -82,8 +82,8 @@ function Prilohy({ seePrilohy, setSeePrilohy, prilohy }: PrilohyProps) {
             </Tab>
           </TabList>
 
-          <TabPanel>
-            <ul className="mt-4 sm:mt-2 p-4 sm:p-2">
+          <TabPanel className="">
+            <ul className="mt-4  sm:mt-2 p-4 sm:p-2">
               {basicPrilohySorted.map((priloha: any, index: number) => {
                 const item = priloha.fields;
 
