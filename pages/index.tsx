@@ -46,9 +46,12 @@ export default function Home({ isMobile, windowWidth, ...props }: homeProps) {
 }
 
 export async function getServerSideProps(props: any) {
+  const ctfSpace = process.env.CONTENTFUL_SPACE || "";
+  const ctfAccessToken = process.env.CONTENTFUL_ACCESS_TOKEN || "";
+
   const client = createClient({
-    space: "xx2dzasjcpic",
-    accessToken: "Shkp5PbccjOlxcv1F0xI-ZfxwZ0i2lN9lv_6hC8eS4s",
+    space: ctfSpace,
+    accessToken: ctfAccessToken,
   });
 
   const categories = await client.getEntries({

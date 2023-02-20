@@ -1,10 +1,14 @@
 import { createClient } from "contentful";
 
 
-const client = createClient({
-    space: "xx2dzasjcpic",
-    accessToken: "Shkp5PbccjOlxcv1F0xI-ZfxwZ0i2lN9lv_6hC8eS4s",
+const ctfSpace = process.env.CONTENTFUL_SPACE || "";
+  const ctfAccessToken = process.env.CONTENTFUL_ACCESS_TOKEN || "";
+
+  const client = createClient({
+    space: ctfSpace,
+    accessToken: ctfAccessToken,
   });
+
 
 
 export const getCategories = async () => {
