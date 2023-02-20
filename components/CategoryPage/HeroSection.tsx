@@ -35,7 +35,7 @@ function HeroSection({ url, foodTitle, isMobile }: HeroSectionProps) {
           <p className="text-xl font-semibold font-quicksand ">Domov</p>
         </Link>
         <div className="p-8 sm:p-6 bg-white shadow-md rounded-md">
-          <div className="flex sm:flex-wrap gap-2 justify-between items-center">
+          <div className="flex sm:flex-wrap gap-x-2 justify-between items-center">
             <h1 className="sm:text-xl md:text-4xl text-4xl font-quicksand font-semibold">
               {foodTitle}
             </h1>
