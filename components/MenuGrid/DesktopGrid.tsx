@@ -15,7 +15,7 @@ function DesktopGrid(props: any) {
           alt="main course"
           style={{ width: "25px", height: "25px" }}
         />
-        <h3>Hlavné Chody</h3>
+        <p>Hlavné Chody</p>
       </div>
       <div className=" grid grid-cols-3 gid-rows-2 gap-4 w-full mt-4">
         {mainCourse
@@ -41,7 +41,7 @@ function DesktopGrid(props: any) {
           alt="main course"
           style={{ width: "25px", height: "25px" }}
         />
-        <h3>Dezerty</h3>
+        <p>Dezerty</p>
       </div>
 
       <div className=" grid grid-cols-3 gid-rows-2 gap-4 w-full h-80 mt-4">
