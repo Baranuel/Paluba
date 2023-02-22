@@ -91,6 +91,6 @@ export async function getStaticProps({ params }: any) {
       foodItems: foodItems.items,
       prilohy: prilohy.items,
     },
-    revalidate:600
+    revalidate:10
   };
 }
