@@ -100,16 +100,14 @@ export async function getStaticPaths() {
 
   const categories = await getCategories();
   const paths = categories.items.map((category:any) => {
-
-    if(category.fields.title_id !== "Prílohy"){
-      console.log(category.fields.title_id)
-      return { params: { category: category.fields.title_id } };
-    }
+    return { params: { category: category.fields.title_id } };
   }
   );
 
+  const filteredPaths = paths.filter((path:any) => path.params.category !== "Prílohy")
+
  return {
-    paths,
+    paths: filteredPaths,
     fallback: false,
  }
 }
