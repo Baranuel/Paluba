@@ -15,9 +15,9 @@ function RecenziaCard({ text, author }: RecenziaCardProps) {
         {" "}
         {text}
       </p>
-      <h3 className="self-center mt-12 sm:mt-8 text-4xl sm:text-2xl  font-medium font-sacramento text-primaryRed">
+      <p className="self-center mt-12 sm:mt-8 text-4xl sm:text-2xl  font-medium font-sacramento text-primaryRed">
         - {author}
-      </h3>
+      </p>
     </div>
   );
 }
