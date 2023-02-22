@@ -78,7 +78,7 @@ function Category({
 
 export default Category;
 
-export async function getServerSideProps({ params }: any) {
+export async function getStaticProps({ params }: any) {
   const category = params.category;
   const foodItems = await getFoodItems(category);
   const prilohy = await getPrilohy();
@@ -91,5 +91,6 @@ export async function getServerSideProps({ params }: any) {
       foodItems: foodItems.items,
       prilohy: prilohy.items,
     },
+    revalidate:600
   };
 }
