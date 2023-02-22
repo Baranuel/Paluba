@@ -79,7 +79,7 @@ function Category({
 export default Category;
 
 export async function getStaticProps({ params }: any) {
-
+  
   const category = params.category;
   const foodItems = await getFoodItems(category);
   const prilohy = await getPrilohy();
@@ -100,8 +100,9 @@ export async function getStaticPaths() {
 
   const categories = await getCategories();
   const paths = categories.items.map((category:any) => {
-{
-      return { params: { category: 'Pizza'} };
+
+    if(category.fields.title_id !== "Prílohy"){
+      return { params: { category: category.fields.title_id } };
     }
   }
   );
