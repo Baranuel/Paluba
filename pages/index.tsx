@@ -5,6 +5,7 @@ import MenuGrid from "../components/MenuGrid/MenuGrid";
 import HodnotyPage from "../components/NaseHodnoty/HodnotyPage";
 import RecenziePage from "../components/Recenzie/RecenziePage";
 import ContactPage from "../components/Kdenasnajdete/ContactPage";
+import { getCategories } from "@/helpers/getFoodItems";
 
 interface homeProps {
   isMobile: boolean;
@@ -45,19 +46,9 @@ export default function Home({ isMobile, windowWidth, ...props }: homeProps) {
   );
 }
 
-export async function getServerSideProps(props: any) {
-  const ctfSpace = process.env.CONTENTFUL_SPACE || "";
-  const ctfAccessToken = process.env.CONTENTFUL_ACCESS_TOKEN || "";
+export async function getStaticProps(props: any) {
 
-  const client = createClient({
-    space: ctfSpace,
-    accessToken: ctfAccessToken,
-  });
-
-  const categories = await client.getEntries({
-    content_type: "category",
-    include: 10,
-  });
+  const categories = await getCategories()
 
   return {
     props: {
