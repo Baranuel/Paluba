@@ -30,7 +30,7 @@ function Category({
 }: CategoryProps) {
   const router = useRouter();
   const [seeVegetarian, setSeeVegetarian] = useState(false);
-  const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}`;
+  const categoryImage = `https:${linkedTo.Asset[0].fields.file.url}` || "";
 
   const foodTitle = router.query.category as string;
   const possibleCategories = categories.filter(
