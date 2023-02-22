@@ -100,9 +100,8 @@ export async function getStaticPaths() {
 
   const categories = await getCategories();
   const paths = categories.items.map((category:any) => {
-
-    if(category.fields.title_id !== "Prílohy" || category.fields.title_id !== "Palacinky" || category.fields.title_id !== "Tvarohová Pizza"){
-      return { params: { category: category.fields.title_id } };
+{
+      return { params: { category: 'Pizza'} };
     }
   }
   );
