@@ -95,9 +95,15 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
-export async function getStaticPaths({params}:any) {
-  return {
-    paths: [{ params: { category: params.category } }],
-    fallback: false, // can also be true or 'blocking'
-  }
+export async function getStaticPaths() {
+
+  const categories = await getCategories();
+  const paths = categories.items.map((category:any) => ({
+      params: { category: category.fields.title_id}})
+  );
+
+ return {
+    paths,
+    fallback: false,
+ }
 }
