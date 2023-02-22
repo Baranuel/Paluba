@@ -87,7 +87,7 @@ export async function getStaticProps({ params }: any) {
   return {
     props: {
       categories: categories.items,
-      linkedTo: foodItems.includes,
+      linkedTo: foodItems.includes ?? {},
       foodItems: foodItems.items,
       prilohy: prilohy.items,
     },
@@ -98,8 +98,12 @@ export async function getStaticProps({ params }: any) {
 export async function getStaticPaths() {
 
   const categories = await getCategories();
-  const paths = categories.items.map((category:any) => ({
-      params: { category: category.fields.title_id}})
+  const paths = categories.items.map((category:any) => {
+    
+    if(category.fields.title_id !== "Prílohy"){
+      return { params: { category: category.fields.title_id } };
+    }
+  }
   );
 
  return {
