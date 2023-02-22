@@ -21,9 +21,9 @@ function HodnotaCard({ image, title, text, isMobile }: HodnotaCardProps) {
         alt="hodnota image"
       />
       <div className="min-w-fit flex flex-col  p-2 sm:p-0">
-        <h3 className="font-semibold text-xl lg:text-xl sm:text-[17px] xs:text-sm md:text-md sm:leading-[1rem] text-primaryRed">
+        <p className="font-semibold text-xl lg:text-xl sm:text-[17px] xs:text-sm md:text-md sm:leading-[1rem] text-primaryRed">
           {title}
-        </h3>
+        </p>
         <p className="font-medium text-bluntGrey text-xl lg:text-lg  md:text-sm sm:text-[13px] sm:leading-[1.5rem]">
           {text}
         </p>
