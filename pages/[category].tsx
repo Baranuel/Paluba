@@ -94,3 +94,10 @@ export async function getStaticProps({ params }: any) {
     revalidate:10
   };
 }
+
+export async function getStaticPaths({params}:any) {
+  return {
+    paths: [{ params: { category: params.category } }],
+    fallback: false, // can also be true or 'blocking'
+  }
+}
